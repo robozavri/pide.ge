@@ -1,0 +1,38 @@
+// .sidenav-container {
+//   height: 100%;
+// }
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+  .burger-menu-button {
+    display: none;
+  }
+}
+
+.lang-dropdown {
+  .arrow-icon {
+    width: 10px;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -6,8 +6,6 @@ const userStub = {
   email: 'me@gmail.com',
   firstName: 'First',
   lastName: 'Last',
-  gender: genders.MALE,
-  dateOfBirth: new Date(1990, 0, 1),
   passwordHash: '$2a$10$CWAGAtwAv2xdjnR.pzicqOipZwshQOtplPDRnsJ4gezFJBNTa/tcm',
   isActivated: false,
   activationToken: 'test-activation-token',

@@ -7,6 +7,20 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LangService } from './services/lang.service';
 import { CookieService } from 'ngx-cookie-service';
 
+
+import {
+  MatSidenavModule,
+  MatButtonModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatSnackBarModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+
 @NgModule({
   declarations: [ResourceUrlPipe],
   imports: [
@@ -15,6 +29,17 @@ import { CookieService } from 'ngx-cookie-service';
     RouterModule,
     ReactiveFormsModule,
     TranslateModule,
+
+    MatSidenavModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatToolbarModule,
   ],
   exports: [
     FormsModule,
@@ -22,6 +47,17 @@ import { CookieService } from 'ngx-cookie-service';
     ReactiveFormsModule,
     ResourceUrlPipe,
     TranslateModule,
+
+    MatSidenavModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatMenuModule,
   ],
 })
 export class SharedModule {
@@ -29,6 +65,9 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
+        {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {
+          duration: 2500,
+        }},
         LangService,
         TranslateService,
         CookieService,

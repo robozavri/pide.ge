@@ -20,7 +20,7 @@
 // note: object key titles must be camelCase
 
 // available langs
-export const availableLangs = ['en', 'ge' ];
+export const availableLangs = ['en', 'ge'. 'ru' ];
 
 // list display fields
 // only String or multilingualSchema

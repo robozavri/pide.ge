@@ -1,2 +1,133 @@
-// Media
-@media (max-width: 1199px) {}
+.st-field-wrapper {
+    margin-bottom: 1rem;
+    // font-family: $main-font;
+  
+    .label {
+      color: #231F20;
+      font-weight: 900;
+      font-size: 1rem;
+      margin-bottom: .2rem;
+    }
+  
+    .st-field {
+      position: relative;
+      height: 3rem;
+  
+    //   &.st-field-texatea {
+    //     height: auto;
+    //   }
+  
+      .phone-mask {
+        position: absolute;
+        color: #D9D9D9;
+        font-size: 1rem;
+        font-weight: 500;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        display: inline-block;
+        line-height: 3rem;
+        text-align: center;
+        padding: 0 15px;
+        font-weight: 400;
+        
+        // & ~.st-input {
+        //   padding-left: 4rem;
+        // }
+      }
+  
+    //   .show-marker {
+    //     position: absolute;
+    //     color: #D9D9D9;
+    //     font-size: 1rem;
+    //     font-weight: 500;
+    //     top: 0;
+    //     right: 0;
+    //     width: auto;
+    //     height: 100%;
+    //     display: inline-block;
+    //     line-height: 3rem;
+    //     text-align: center;
+    //     padding: 0 15px;
+    //     font-weight: 400;
+        
+    //     & ~.st-input {
+    //       padding-right: 4rem;
+    //     }
+    //   }
+  
+      .st-input,
+      .st-texatea {
+        border: 1px solid #D9D9D9;
+        height: 100%;
+        border-radius: 0.9rem !important;
+        width: 100%;
+        color: #231F20;
+  
+        &:focus {
+          outline: none;
+          color: #231F20;
+          background-color: #fff;
+          border-color: #EE1C28;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+  
+    //   .st-texatea {
+    //     resize: none;
+    //   }
+  
+    //   .pass-recovery {
+    //     color: #231F20;
+    //     font-size: 12px;
+    //     font-weight: 400;
+    //     cursor: pointer;
+    //     margin-top: 0.5rem;
+    //   }
+    // }
+  }
+  
+  
+//   .st-checkbox-wrapper {
+  
+//     .st-checkbox {
+//       position: absolute;
+//       opacity: 0;
+    
+//       & + label {
+//         position: relative;
+//         cursor: pointer;
+//         padding: 0;
+//         font-size: 14px;
+//       }
+  
+//       & + label:before {
+//         content: '';
+//         margin-right: 5px;
+//         display: inline-block;
+//         vertical-align: text-top;
+//         width: 15px;
+//         height: 15px;
+//         background: white;
+//         border: 1px solid #D9D9D9;
+//         border-radius: 4px;
+  
+//       }
+  
+//       &:checked + label:after {
+//         content: "";
+//         position: absolute;
+//         left: 5px;
+//         top: 8px;
+//         background: red;
+//         width: 5px;
+//         height: 5px;
+//       }
+//     }
+  }
+  
+  
+  // Media
+  @media (max-width: 1199px) {}

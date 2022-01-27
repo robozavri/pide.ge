@@ -5,6 +5,79 @@
   line-height: 1;
 }
 
+.st-btn {
+  border-radius: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  height: 3rem;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  font-weight: 300;
+  cursor: pointer;
+  color: #231F20;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &.st-font-bold {
+    font-weight: bold;
+  }
+
+  &.st-btn-outline {
+    border: 1px solid #12B57F;
+  }
+
+  &.st-btn-filled {
+    border: 1px solid #12B57F;
+    background-color: #12B57F;
+    color: #fff;
+  }
+
+  &.btn-white {
+    background-color: #fff;
+    color: #231F20;
+  } 
+  
+  &.btn-full {
+    width: 100%;
+  }
+
+  // &.btn-fb {
+  //   border: 1px solid #3B5998;
+  //   background-color: #3B5998;
+  //   color: #fff;
+  //   width: 100%;
+
+  //   img {
+  //     margin-right: 5px;
+  //   }
+  // }
+
+  // &.st-category-btn {
+  //   height: 38px;
+  //   color: #EE1C28;
+  //   background: white;
+  //   width: 100%;
+  //   margin-bottom: 10px;
+  //   width: 100%;
+
+  //   img {
+  //     margin-right: 10px;
+  //   }
+
+  //   &.st-full-height {
+  //     height: 3rem;
+  //   }
+  // }
+
+}
+
 // Media
 @media (max-width: 1199px) {}
 

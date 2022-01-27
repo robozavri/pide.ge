@@ -12,6 +12,9 @@ import userRouter from './api/users';
 import metaRouter from './api/metas';
 import eventRouter from './api/events';
 import appLogsRouter from './api/appLogs';
+import migrationRouter from './api/migrations';
+import blogCategoriesRouter from './api/blog-categories';
+import blogRouter from './api/blogs';
 
 import { getMetaTags } from './helpers/metaTagsHelper';
 
@@ -33,6 +36,9 @@ export function initRoutes(app: Express) {
   app.use('/api/metas', metaRouter);
   app.use('/api/events', eventRouter);
   app.use('/api/appLogs', appLogsRouter);
+  app.use('/api/migrations', migrationRouter);
+  app.use('/api/blog-categories', blogCategoriesRouter);
+  app.use('/api/blogs', blogRouter);
 
   app.get('/admin/*', renderAdminHtml);
   app.get('/*', renderClientHtml);
