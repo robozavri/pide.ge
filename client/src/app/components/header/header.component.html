@@ -1,2 +1,23 @@
-<app-main-nav></app-main-nav>
+<!-- <app-main-nav></app-main-nav> -->
 
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+
+        <div id="logo"><a href="#"><img src="assets/logo.svg" alt="pide" /></a></div>
+            
+        <div>
+            <div mat-button [matMenuTriggerFor]="menu">
+              <span class="lang-dropdown">
+                <img src="assets/icons/flags/flag_ge.svg" alt="pide"/>
+                <img class="arrow-icon" src="https://pide.ge/images/arrow.png" alt="pide"/>
+              </span> 
+            </div>
+            <mat-menu #menu="matMenu">
+              <li mat-menu-item><span><img src="assets/icons/flags/flag_ge.svg" alt="pide"/></span> <span>GEO</span> </li>
+              <li mat-menu-item><img src="assets/icons/flags/flag_en.svg" alt="pide"/><span>ENG</span></li>
+              <li mat-menu-item><img src="assets/icons/flags/flag_ru.svg" alt="pide"/><span>RUS</span></li>       
+            </mat-menu>
+          </div>
+     
+    </div>
+  </nav>

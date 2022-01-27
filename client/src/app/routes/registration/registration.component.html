@@ -1,15 +1,41 @@
 <app-header></app-header>
   
-
 <div class="container">
+
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <div class="login-container">
+      <div class="login-container col-sm-12 col-md-8 col-lg-6">
         <div class="form-container">
             <form autocomplete="off" [formGroup]="form">
                     
                 <!-- <h2 class="section-title mr-b-16 d-none d-md-block"> {{ 'LOGIN.LOGIN_TITLE' | translate }}  </h2> -->
-                <h2 class="section-title "> შესვლა  </h2>
+                <h2 class="section-title"> რეგისტრაცია  </h2>
+    
+                <div class="st-field-wrapper double-wraper">
+                  <!-- <label class="label"> {{ 'FORMS.PASSWORD' | translate }} </label>
+                  
+                  <div class="input_error" *ngIf="checkHasError('password', 'required')">
+                    {{'FORMS.ERRORS_REQUIRED' | translate }}
+                  </div>
+                  <div class="input_error" *ngIf="checkHasError('password', 'minlength')">
+                    {{'FORMS.ERRORS_PASSWORD_MIN_LENGTH' | translate }}
+                  </div>
+                  <div class="input_error" *ngIf="checkHasError('password', 'maxlength')">
+                    {{'FORMS.ERRORS_PASSWORD_MAX_LENGTH' | translate }}
+                  </div> -->
+    
+                  <div class="st-field st-field-half">
+                    <input class="st-input form-control" type="text" formControlName='firstname' placeholder="სახელი">
+    
+                    <!-- <div class="pass-recovery"  > {{ 'LOGIN.FORGOT_PASSWORD' | translate }} </div> -->
+                  </div>
+    
+                  <div class="st-field st-field-half">
+                    <input class="st-input form-control" type="text" formControlName='lastname' placeholder="გვარი">
+    
+                    <!-- <div class="pass-recovery"  > {{ 'LOGIN.FORGOT_PASSWORD' | translate }} </div> -->
+                  </div>
+                </div>
     
                 <div class="st-field-wrapper">
                   <!-- <label class="label"> {{ 'FORMS.PHONE_NUMBER' | translate }} </label>
@@ -76,21 +102,41 @@
                     <!-- <div class="pass-recovery"  > {{ 'LOGIN.FORGOT_PASSWORD' | translate }} </div> -->
                   </div>
                 </div>
+    
+                <div class="st-field-wrapper">
+                  <!-- <label class="label"> {{ 'FORMS.PASSWORD' | translate }} </label>
+                  
+                  <div class="input_error" *ngIf="checkHasError('password', 'required')">
+                    {{'FORMS.ERRORS_REQUIRED' | translate }}
+                  </div>
+                  <div class="input_error" *ngIf="checkHasError('password', 'minlength')">
+                    {{'FORMS.ERRORS_PASSWORD_MIN_LENGTH' | translate }}
+                  </div>
+                  <div class="input_error" *ngIf="checkHasError('password', 'maxlength')">
+                    {{'FORMS.ERRORS_PASSWORD_MAX_LENGTH' | translate }}
+                  </div> -->
+    
+                  <div class="st-field">
+                    <input class="st-input form-control" type="password" formControlName='repeatPassword' placeholder="გაიმეორეთ პაროლი">
+    
+                    <!-- <div class="pass-recovery"  > {{ 'LOGIN.FORGOT_PASSWORD' | translate }} </div> -->
+                  </div>
+                </div>
                 <div>
                     <button class="st-btn st-btn-filled btn-full mr-b-16 mr-t-40" > შესვლა </button>
                 </div>
               <div class="links">
-                არ გაქვთ ანგარიში ? <a  class="link" [routerLink]="[ '/registration' ]">რეგისტრაცია</a>
+                გაქვთ ანგარიში ?  <a  class="link" [routerLink]="[ '/login' ]">შესვლა</a>
               </div>
               
     
               </form>
         </div>
+    
     </div>
-    </div>
+ </div>
   </div>
 </div>
-
 
 
 <app-footer></app-footer>
