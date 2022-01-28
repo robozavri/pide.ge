@@ -1,0 +1,129 @@
+
+.central-card {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 24px;
+}
+
+.card-content {
+    border-radius: 20px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=19, Direction=135, Color=#000000)";/*IE 8*/
+    -moz-box-shadow: 1px 1px 19px 2px rgba(0,0,0,0.1);/*FF 3.5+*/
+    -webkit-box-shadow: 1px 1px 19px 2px rgba(0,0,0,0.1);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 1px 1px 19px 2px rgba(0,0,0,0.1);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=19, Direction=135, Color=#000000); /*IE 5.5-7*/
+}
+
+.card-header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64px;
+    margin: 24px;
+    border-bottom: dashed 1px #E6E6E7;
+
+    .walker {
+        display: flex;
+        flex-direction: row;
+    }
+    .walker-avatar {
+        width: 44px;
+    }
+    .walker-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+}
+
+
+.info-content-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+/*
+.info-helder {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .info-helder-item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        .info-title {
+            font-weight: bold;
+        }
+    }
+}
+ */
+
+.detail-info {
+    margin-left: 4px;
+    margin-top: 20px;
+}
+
+.info-column-item{
+    margin-top: 20px;
+}
+
+
+.info-fotos {
+    .img-container { 
+        // margin-right: 17px;
+        margin-bottom: 17px;
+    }
+    margin-top: 20px;
+    .dog-img {
+      
+        border-radius: 20px;
+        width:  100%;
+        height: 100%;
+        // width:  124px;
+        // height: 124px;
+        object-fit: cover;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .card-header-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 130px;
+        margin: 24px;
+        border-bottom: dashed 1px #E6E6E7;
+    }
+
+    .rate-btn-container {
+        margin-bottom: 20px;
+    }
+}
+
+/* comons */
+
+.m-24 {
+    margin: 24px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
