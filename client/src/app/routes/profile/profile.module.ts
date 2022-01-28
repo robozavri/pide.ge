@@ -4,6 +4,7 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import {IvyGalleryModule} from 'angular-gallery';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     ProfileRoutingModule,
     SharedModule,
     ComponentsModule,
+    IvyGalleryModule
   ]
 })
 export class ProfileModule { }

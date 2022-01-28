@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@ngx-translate/core": "^12.1.2",
+    "angular-gallery": "^1.0.2",
     "hammerjs": "^2.0.8",
     "ngx-cookie-service": "^3.0.4",
     "rxjs": "~6.5.5",
