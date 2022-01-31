@@ -19,10 +19,15 @@ import {
   MatSnackBarModule,
   MatToolbarModule,
   MatMenuModule,
+  MatCheckboxModule,
   MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+import { CreatePetComponent } from './components/create-pet/create-pet.component';
 
 @NgModule({
-  declarations: [ResourceUrlPipe],
+  declarations: [
+    ResourceUrlPipe,
+    CreatePetComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -40,6 +45,7 @@ import {
     MatSnackBarModule,
     MatMenuModule,
     MatToolbarModule,
+    MatCheckboxModule,
   ],
   exports: [
     FormsModule,
@@ -58,6 +64,9 @@ import {
     MatSnackBarModule,
     MatToolbarModule,
     MatMenuModule,
+    MatCheckboxModule,
+
+    CreatePetComponent,
   ],
 })
 export class SharedModule {

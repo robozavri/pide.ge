@@ -1,0 +1,125 @@
+.main-container {
+    margin: 0 auto;
+}
+
+.section-title { 
+    text-align: center;
+    margin-bottom: 64px;
+    font-weight: bold;
+}
+
+.example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
+
+  .double-wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.character-col-title-holder {
+ 
+  margin-bottom: 29px;
+}
+.character-col-title{ 
+  font-weight: bold;
+}
+.character-col-sub-title {
+  font-size: small;
+  color: #808189;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  text-align: center;
+
+  button {
+    width: 552px;
+    height: 62px;
+  }
+
+}
+
+.upload-photo-container {
+  display: flex;
+  flex-direction: row;
+  border: dashed 1px #3F14CC;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  cursor: pointer;
+
+  .icon-holder {
+    margin: 22px 9px 22px 24px;
+  }
+  .text-holder {
+    margin: 22px 22px 22px 9px;
+    font-weight: bold;
+    color: #3F14CC;
+  }
+}
+
+.pet-birthday {
+  position: absolute;
+  margin-top: -44px;
+  // margin-left: 300px;
+  // margin-left: 80%;
+}
+
+.characteristics-title {
+  border-bottom: dashed 1px #E6E6E7;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  margin-bottom: 22px;
+}
+
+select {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+
+  background: transparent;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC4SURBVHgB7ZDBCYNAEEX/7qyQ44AreLQVO0gHlpJ0YDpIOrGElJAWhOTospnREAhGoh5y8sPCMH/f39kBNhGYGeAc3aNdRO7yAp2DxZ32JoRGQngJ3DNJUg0N5w/G+eusEJnYJHJXmE/D+VpCml/8d/glS9nFUnqegtUHZZP+8IJMYV1Wj+H0hBkTQj+p+7DOH9+w1FM7cuOAto0dlyDSkL4TY6xiCKV6mC8uDKU3PVpjnRRcDf9JT3BlK7fWtZ73AAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position-x: 96%;
+  background-position-y: 13px;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+  .pet-birthday {
+    margin-left: 80%;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .pet-birthday {
+    margin-left: 77%;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .pet-birthday {
+    margin-left: 70%;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 769px) {
+  .pet-birthday {
+    margin-left: 85%;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 440px) {
+  .pet-birthday {
+    margin-left: 82%;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 370px) {
+  .pet-birthday {
+    margin-left: 77%;
+  }
+}
