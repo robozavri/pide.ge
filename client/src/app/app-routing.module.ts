@@ -29,6 +29,10 @@ const routes: Routes = [
 				path: 'order/create',
 				loadChildren: () => import('./routes/create-order/create-order.module').then(m => m.CreateOrderModule)
 			},
+			{
+				path: 'my/pets',
+				loadChildren: () => import('./routes/my-pets/my-pets.module').then(m => m.MyPetsModule)
+			},
     ]
   }
 ];

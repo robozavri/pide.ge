@@ -1,0 +1,56 @@
+.main-container {
+    margin: 0 auto;
+}
+
+.section-title { 
+    text-align: center;
+    margin-bottom: 64px;
+    font-weight: bold;
+}
+
+.pet-item { 
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #E6E6E7;
+    border-radius: 20px;
+    align-content: center;
+    margin-bottom: 24px;
+
+    padding: 16px;
+    .pet-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        object-fit: cover;    
+    }
+
+    .pet-name {
+        margin-left: 10px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #010414;
+        font-weight: bold;
+    }
+
+    .edit {
+        margin-left: auto;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.add-btn {
+    border-radius: 20px;
+    text-align: center;
+    background-color: #D9F3EA;
+    color: #12B57F;
+    padding: 23px;
+    .btn-title {
+        margin-left: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
