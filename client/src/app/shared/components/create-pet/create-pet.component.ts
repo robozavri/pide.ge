@@ -11,7 +11,6 @@ import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@ang
 export class CreatePetComponent implements OnInit {
 
   form: FormGroup;
-  myModel = false;
 
   get getAtWalk(): FormArray {
     return this.form.get('atWalk') as FormArray;
