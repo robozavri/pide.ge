@@ -12,7 +12,7 @@
             <form [formGroup]="form" class="form">
 
                   <div class="st-field-wrapper row mb-40">
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 input-container">
                       <div class="pet-item">
                           <div class="pet-img-holder">
                               <img class="pet-img" src="assets/icons/petavatar.png" alt="" >
@@ -27,7 +27,7 @@
                             </div> 
                       </div>
                     </div>
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6">
                       <div class="pet-item">
                           <div class="pet-img-holder">
                               <img class="pet-img" src="assets/images/1.jpg" alt="" >
@@ -44,12 +44,12 @@
                   </div>
 
                   <div class="st-field-wrapper row mb-40">
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 input-container">
                       <label for="address">მისამართი</label>
                       <input class="st-input form-control" type="text" formControlName='address' placeholder="მისამართი">
                     </div>
 
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 ">
                       <div class="st-field">
                         <label for="secondPhone">მეორე საკონტაქტო პირის ნომერი</label> 
                         <div class="phone-mask-wraper">
@@ -62,14 +62,14 @@
                   </div>
 
                   <div class="st-field-wrapper row mb-40">
-                      <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                      <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 input-container">
                           <label for="startDate">როდიდან გსურთ დაწყება</label> 
                           <input class="st-input form-control"  matInput [matDatepicker]="startDate" placeholder="დაწყების რიცხვი" formControlName='startDate' >
                           <mat-datepicker-toggle   matSuffix [for]="startDate" class="startDate"></mat-datepicker-toggle>
                           <mat-datepicker #startDate></mat-datepicker>
                       </div>
 
-                      <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                      <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6">
                         <label for="endDate">დასრულების დრო</label>
                         <input class="st-input form-control"  matInput [matDatepicker]="endDate" placeholder="დამთავრების რიცხვი" formControlName='endDate' >
                         <mat-datepicker-toggle   matSuffix [for]="endDate" class="startDate"></mat-datepicker-toggle>
@@ -79,27 +79,27 @@
                   </div>
 
                   <div class="st-field-wrapper row days-row">
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-12 col-xl-12">
                       <div class="days-title">
                         აირჩიეთ კვირის დღეები
                       </div>
                       <div class="days-wraper">
-                        <div *ngFor="let day of weekDays" class="day-active">{{ day.miniTitle.ge }}</div>
+                        <div *ngFor="let day of weekDays" class="day day-active">{{ day.miniTitle.ge }}</div>
                       </div>                     
                     </div>
                   </div>
 
                   <div class="st-field-wrapper row mb-40 walk-days-container">
-                    <div class="st-field st-field-half col-sm-12  col-md-6 col-lg-6">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 walk-days-holder"  *ngFor="let item of weekDays">
                       <div class="walk-day-wraper">
-                        <div>ორშაბათი</div>
-                        <div>დღეში რამდენჯერ გსურთ გასეირნება</div>
+                        <div class="walk-day-title">ორშაბათი</div>
+                        <div class="walk-day-question">დღეში რამდენჯერ გსურთ გასეირნება</div>
                         <div class="walk-day">
                           <div class="walk-day-header">
                             <div>1</div>
                             <div>
                               <img class="time-icon" src="assets/icons/minus.png" alt="">
-                              <img class="time-icon" src="assets/icons/add.png" alt="">
+                              <img class="time-icon ml-10" src="assets/icons/add.png" alt="">
                             </div>
                           </div>
                           <div class="walk-day-body">
@@ -121,10 +121,13 @@
                     </div>
                   </div>
 
-                  <div class="btn-submit">
-                    <button class="st-btn st-btn-filled  mr-b-16 mr-t-40" > შემდეგი </button>
+                  <div class="row">
+                    <div class="col-sm-12  col-md-12 col-lg-12">
+                      <div class="btn-submit">
+                        <button class="st-btn st-btn-filled  mr-b-16 mr-t-40" > შემდეგი </button>
+                      </div>
+                    </div>
                   </div>
-          
             </form>
 
 

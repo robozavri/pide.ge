@@ -103,27 +103,44 @@
         font-weight: bold;
     }
 }
+
 .days-wraper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
    
     .day {
-        border-radius: 12px;
+      border-radius: 12px;
+      margin: 0px 5px 5px 0px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .day-deactive {
         border: 1px solid #E6E6E7;
         background-color: #fff;
         color: #000;
-        padding: 20px;
-        margin-right: 5px;
-        cursor: pointer;
     }
     .day-active {
-        border-radius: 12px;
         background-color: #3F14CC;
         color: #fff;
-        padding: 20px;
-        margin-right: 5px;
-        cursor: pointer;
     }
+}
+
+.walk-days-holder {
+  min-height: 270px;
+  // max-height: 270px;
+  margin-bottom: 10px;
+
+  .walk-day-title {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .walk-day-question {
+    font-weight: bold;
+    font-size: 14px;
+    color: #808189;
+    margin-bottom: 10px;
+  }
 }
 
 .btn-submit {
@@ -131,14 +148,12 @@
     text-align: center;
 
     button {
-        width: 552px;
-        height: 62px;
+        width: 168px;
+        height: 56px;
     }
 }
 
-.walk-days-container {
-    height: 200px;
-}
+
 .walk-day {
     display: flex;
     flex-direction: column;
@@ -178,26 +193,69 @@
     .startDate {
       margin-left: 77%;
     }
+    .pet-name {
+      font-size: 13px;
+    }
+    label {
+      font-size: 13px;
+    }
+    .phone-mask-wraper {
+      margin-top: 32px;
+    }
+
+    .walk-days-holder {
+      height: 270px;
+      margin-bottom: 20px;
+    }
   }
   
   @media screen and (min-width: 770px) and (max-width: 992px) {
     .startDate {
-      margin-left: 70%;
-    }
-  }
-  @media screen and (min-width: 440px) and (max-width: 769px) {
-    .startDate {
       margin-left: 85%;
     }
+  
+    .input-container {
+      margin-bottom: 50px;
+    }
+  
   }
+
+  @media screen and (min-width: 440px) and (max-width: 769px) {
+    .startDate {
+      margin-left: 87%;
+    }
+
+    .input-container {
+      margin-bottom: 50px;
+    }
+  }
+
   @media screen and (min-width: 370px) and (max-width: 440px) {
     .startDate {
       margin-left: 82%;
     }
+    .input-container {
+      margin-bottom: 50px;
+    }
+
+    .days-row{
+      margin-bottom: 40px;
+    }
   }
+  
   @media screen and (min-width: 300px) and (max-width: 370px) {
     .startDate {
       margin-left: 77%;
+    }
+    .input-container {
+      margin-bottom: 50px;
+    }
+    .days-row{
+      margin-bottom: 40px;
+    }
+    .walk-days-holder {
+      height: 270px;
+      margin-bottom: 10px;
     }
   }
   
