@@ -7,7 +7,10 @@
     margin-bottom: 64px;
     font-weight: bold;
 }
-
+.small-title {
+  font-size: 16px;
+  color: #010414;
+}
 
 .phone-mask-wraper {
     margin-top: 33px;
@@ -65,8 +68,8 @@
     border-radius: 20px;
     align-content: center;
     margin-bottom: 24px;
-
     padding: 16px;
+
     .pet-img {
         width: 50px;
         height: 50px;
@@ -83,6 +86,40 @@
     }
 
     .pet-checkbox {
+        margin-left: auto;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+.walk-type-item { 
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #3F14CC;
+    border-radius: 20px;
+    align-content: center;
+    margin-bottom: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .walk-type-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        object-fit: cover;    
+    }
+
+    .walk-type-name {
+        margin-left: 10px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #010414;
+    }
+
+    .walk-type-radio {
         margin-left: auto;
         margin-top: 10px;
         cursor: pointer;
@@ -143,13 +180,123 @@
   }
 }
 
+.payment-question {
+  font-size: 14px;
+  color: #010414;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #3F14CC;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .price-left {
+    color: #3F14CC;
+    font-weight: bold;
+  }
+  .price-right {
+    background-color: #3F14CC;
+    color: #fff;
+    padding: 7px;
+    border-radius: 16px;
+  }
+  .price-right-one {
+    font-weight: bold;
+  }
+}
+
+.packages-first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  margin-bottom: 10px;
+}
+.packages-second-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-info-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .order-pets {
+    border-bottom: solid 1px #E6E6E7;
+    padding-bottom: 5px;
+  }
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=72, Color=#000000)";/*IE 8*/
+  -moz-box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/*FF 3.5+*/
+  -webkit-box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#000000); /*IE 5.5-7*/
+
+  .order-sections {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.middle-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.iban {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: solid 1px #E6E6E7;
+  border-radius: 16px;
+  margin-top: 20px;
+  align-items: center;
+
+  .iban-color {
+    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .iban-value {
+    margin-left: 20px;
+  }
+  .iban-copy {
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #F6F6F7;
+    border-radius: 10px;   
+    color: #010414;
+    text-transform: uppercase; 
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+  }
+  .bgc-blue {
+    background-color: #1D6DE3;
+  }
+  .bgc-brown {
+    background-color: #E17527;
+  }
+}
+
 .btn-submit {
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
 
     button {
-        width: 168px;
-        height: 56px;
+      width: 100%;
     }
 }
 
@@ -188,8 +335,11 @@
     .startDate {
       margin-left: 80%;
     }
-  }
-  @media screen and (min-width: 993px) and (max-width: 1200px) {
+    .walk-type-container {
+      margin-bottom: 50px;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
     .startDate {
       margin-left: 77%;
     }
@@ -207,9 +357,13 @@
       height: 270px;
       margin-bottom: 20px;
     }
-  }
+
+    .walk-type-container {
+      margin-bottom: 45px;
+    }
+}
   
-  @media screen and (min-width: 770px) and (max-width: 992px) {
+@media screen and (min-width: 770px) and (max-width: 992px) {
     .startDate {
       margin-left: 85%;
     }
@@ -217,10 +371,13 @@
     .input-container {
       margin-bottom: 50px;
     }
-  
-  }
 
-  @media screen and (min-width: 440px) and (max-width: 769px) {
+    .walk-type-container {
+      margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 769px) {
     .startDate {
       margin-left: 87%;
     }
@@ -228,9 +385,13 @@
     .input-container {
       margin-bottom: 50px;
     }
-  }
 
-  @media screen and (min-width: 370px) and (max-width: 440px) {
+    .walk-type-container {
+      margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 440px) {
     .startDate {
       margin-left: 82%;
     }
@@ -241,9 +402,13 @@
     .days-row{
       margin-bottom: 40px;
     }
-  }
+
+    .walk-type-container {
+      margin-bottom: 30px;
+    }
+}
   
-  @media screen and (min-width: 300px) and (max-width: 370px) {
+@media screen and (min-width: 300px) and (max-width: 370px) {
     .startDate {
       margin-left: 77%;
     }
@@ -257,5 +422,9 @@
       height: 270px;
       margin-bottom: 10px;
     }
-  }
+
+    .walk-type-container {
+      margin-bottom: 30px;
+    }
+}
   

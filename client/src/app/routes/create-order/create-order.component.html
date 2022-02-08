@@ -5,12 +5,11 @@
         <div class="col-sm-12  col-md-8 col-lg-8 main-container">
           <!-- <app-create-pet></app-create-pet> -->
 
-          <div>
-            <h2 class="section-title"> შეკვეთის დამატება </h2>
-          </div>
+       
 
             <form [formGroup]="form" class="form">
-
+                <div class="step1" *ngIf="false">
+                  <div  class="section-title">შეკვეთის დამატება</div>
                   <div class="st-field-wrapper row mb-40">
                     <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 input-container">
                       <div class="pet-item">
@@ -121,10 +120,124 @@
                     </div>
                   </div>
 
+                  <div class="st-field-wrapper row mb-40">
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 walk-type-container">
+                      <div class="walk-type-item">
+                          <div class="walk-type-name">
+                              30 წუთი - 16 ლარი
+                          </div>
+                            <div class="walk-type-radio" >                      
+                              <input class="st-radio" type="radio" id="walkType1" name="walkType">
+                              <label for="walkType1"></label>
+                            </div> 
+                      </div>
+                    </div>
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 walk-type-container">
+                      <div class="walk-type-item">
+                          <div class="walk-type-name">
+                              45 წუთი - 18 ლარი
+                          </div>
+                            <div class="walk-type-radio" >                      
+                              <input class="st-radio" type="radio" id="walkType2" name="walkType" >
+                              <label for="walkType2"></label>
+                            </div> 
+                      </div>
+                    </div>
+
+                    <div class="st-field st-field-half col-sm-12  col-md-12 col-lg-6 walk-type-container">
+                      <div class="walk-type-item">
+                          <div class="walk-type-name">
+                              60 წუთი - 23 ლარი
+                          </div>
+                            <div class="walk-type-radio" >                      
+                              <input class="st-radio" type="radio" id="walkType3" name="walkType" >
+                              <label for="walkType3"></label>
+                            </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step2">
+                  <div class="section-title">გადახდა</div>
+                  <div class="middle-title mt-40 mb-20">გადახდის ინტერვალი</div>
+
+                  <div class="payment-question">დღეში რამდენჯერ გსურთ გასეირნება</div>
+                  <div class="st-field-wrapper column mb-40">
+                    <div class="packages col-sm-12  col-md-12 col-lg-12 col-xl-12">
+                      <div class="packages-first-section">გასეირნების წინ</div>
+                      <div class="packages-second-section">
+                        <div>სტანდარტული პაკეტი</div>
+                        <div class="price-right-one">23 ₾</div>
+                      </div>
+                    </div>
+                    <div class="packages col-sm-12  col-md-12 col-lg-12 col-xl-12">
+                      <div class="packages-first-section">
+                        <div>15 დღეში ერთხხელ</div>
+                        <div class="price-right font-bold">-30 ₾</div>
+                      </div>
+                      <div class="packages-second-section">
+                        <div><del>690 ₾</del><span class="price-left"> 660 ₾</span></div>
+                        <div> <span class="price-right-one">22₾</span>  / <del>23 ₾</del></div>
+                      </div>
+                    </div>
+                    <div class="packages col-sm-12  col-md-12 col-lg-12 col-xl-12">
+                      <div class="packages-first-section">
+                        <div>ერთობლივად</div>
+                        <div class="price-right font-bold">-120 ₾</div>
+                      </div>
+                      <div class="packages-second-section">
+                        <div><del>1380 ₾ </del> <span class="price-left"> 1260 ₾</span></div>
+                        <div> <span class="price-right-one">21 ₾</span>/<del>23 ₾</del></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="middle-title mt-40 mb-40">ანგარიში </div>
+
+                  <div class="order-info-container">
+                    <div class="order-sections order-pets">
+                      <div class="packages-first-section order-pets-first-sec"><span class="font-bold"> ჩარლი </span></div>
+                      <div class="packages-second-section">
+                        <div>60 წუთი</div>
+                        <div class="price-right-one"> <span class="font-bold">23 ₾</span> / <del>25 ₾</del></div>
+                      </div>
+                    </div>
+                    <div class="order-sections">
+                      <div class="packages-first-section"><span class="font-bold"> ჯამი </span></div>
+                      <div class="packages-second-section">
+                        <div>60 გასეირნება</div>
+                        <div class="price-right-one"><span class="font-bold"> 1260 ₾</span> / <del>1380 ₾</del></div>
+                      </div>
+                    </div>
+                    <div class="order-sections sale-section">
+                      <div class="packages-first-section"><span class="font-bold"> გამოყენებული ფასდაკლებები </span></div>
+                      <div class="packages-second-section">
+                        <div>გადახდის ინტერვალი</div>
+                        <div class="price-right-one"><span class="font-bold"> -120 ₾</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="middle-title mt-40 mb-40">გადახდის მეთოდი</div>
+                  <div class="small-title">საფასურის გადახდა ხდება მხოლოდ თიბისის ან საქართველოს ბანკის საბანკო ანგარიშებზე</div>
+                  <div class="iban">
+                    <div class="iban-color bgc-blue"></div>
+                    <div class="iban-value fs-16">GE23TB1241240990902</div>
+                    <div class="iban-copy"> <span class="font-bold">copy</span></div>
+                  </div>
+                  <div class="iban">
+                    <div class="iban-color bgc-brown"></div>
+                    <div class="iban-value fs-16">GE23TB1241240990902</div>
+                    <div class="iban-copy"> <span class="font-bold">copy</span></div>
+                  </div>
+
+                </div>
+
                   <div class="row">
                     <div class="col-sm-12  col-md-12 col-lg-12">
                       <div class="btn-submit">
-                        <button class="st-btn st-btn-filled  mr-b-16 mr-t-40" > შემდეგი </button>
+                        <button class="st-btn st-btn-filled font-bold fs-16 mr-b-16 mr-t-40" > <span class="text-upper">შემდეგი</span> </button>
                       </div>
                     </div>
                   </div>

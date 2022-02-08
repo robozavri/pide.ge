@@ -109,6 +109,7 @@ export class CreateOrderComponent implements OnInit {
       startDate: ['', Validators.required],
       endDate: ['', Validators.required],
       walkTime:['', Validators.required],
+      walkType:['', Validators.required],
     });
   }
 
