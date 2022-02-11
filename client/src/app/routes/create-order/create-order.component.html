@@ -28,7 +28,7 @@
 
             <!-- <app-create-pet></app-create-pet> -->     
 
-            <form [formGroup]="form" class="form">
+            <form [formGroup]="form" class="form" *ngIf="false">
                 <div class="step1" *ngIf="false">
                   <div  class="section-title">შეკვეთის დამატება</div>
                   <div class="st-field-wrapper row mb-40">
@@ -264,6 +264,26 @@
                   </div>
             </form>
 
+            <div class="row">
+              <div class="col-sm-12  col-md-12 col-lg-12">
+                  <div class="you-havenot-order ">
+                    <div class="img">
+                      <img src="/assets/icons/dog.png" alt="">
+                    </div>
+                    <div class="text">
+                    <p class="font-bold">ერთი თვე ამოიწურა</p>
+                    <p>შეკვეთის გამოეორებისთვის დააწექით ღილაკს შეკვეთის გამეორება</p>
+                    </div>
+                    <div class="new-order-btn-wraper">
+                      <button class="st-btn st-btn-filled font-bold new-order-btn">ახალი შეკვეთა</button>
+                    </div>
+                    <div class="new-order-btn-wraper">
+                      <button class="st-btn st-btn-filled font-bold repeat-order-btn">შეკვეთის გამეორება</button>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
 
         </div>
     </div>

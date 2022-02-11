@@ -377,6 +377,50 @@
     }
 }
 
+.you-havenot-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E6E6E7;
+  border-radius: 16px;
+  padding-top: 90px;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=72, Color=#000000)";/*IE 8*/
+  -moz-box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/*FF 3.5+*/
+  -webkit-box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: -1px 3px 6px 1px rgba(0,0,0,0.1);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#000000); /*IE 5.5-7*/
+
+  .text  {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    width: 360px;
+    text-align: center;
+  }
+  .text:last-child {
+    font-size:  16px;
+  }
+
+  .new-order-btn-wraper {
+    width: 360px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    .repeat-order-btn {
+      color: #41434F;
+      background-color: #E6E6E7;
+      border: #E6E6E7;
+      width: 100%;
+    }
+    .new-order-btn {
+      width: 100%;
+    }
+  }
+  .new-order-btn-wraper:last-child {
+    margin-bottom: 80px;
+  }
+}
 
 .walk-day {
     display: flex;
@@ -466,6 +510,11 @@
     .walk-type-container {
       margin-bottom: 30px;
     }
+    .you-havenot-order {
+      .new-order-btn-wraper {
+        width: 296px;
+      }
+    }
 }
 
 @media screen and (min-width: 370px) and (max-width: 440px) {
@@ -483,6 +532,11 @@
     .walk-type-container {
       margin-bottom: 30px;
     }
+    .you-havenot-order {
+      .new-order-btn-wraper {
+        width: 296px;
+      }
+    }  
 }
   
 @media screen and (min-width: 300px) and (max-width: 370px) {
@@ -502,6 +556,11 @@
 
     .walk-type-container {
       margin-bottom: 30px;
+    }
+    .you-havenot-order {
+      .new-order-btn-wraper {
+        width: 296px;
+      }
     }
 }
   
