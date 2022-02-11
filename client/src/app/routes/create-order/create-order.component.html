@@ -1,11 +1,32 @@
 <app-header></app-header>
 
+        <div class="steps-nav">
+          <div class="step-nav nav-cancel">
+            <div class="cancel-icon">X</div>
+            <div class="nav-item-title">გაუქმება</div>
+          </div>
+          <div class="step-nav step-nav-finished ">
+            <div class="step-nav-number">01</div>
+            <div class="nav-item-title font-bold">ძაღლის დამატება</div>
+          </div>
+          <div class="step-nav step-nav-active">
+            <div class="step-nav-number">02</div>
+            <div  class="nav-item-title font-bold">გასეირნების დეტალები</div>
+          </div>
+          <div class="step-nav">
+            <div class="step-nav-number">03</div>
+            <div class="nav-item-title font-bold">გადახდის დეტალები</div>
+          </div>
+        </div>
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12  col-md-8 col-lg-8 main-container">
-          <!-- <app-create-pet></app-create-pet> -->
+          
 
-       
+            <!-- <app-create-pet></app-create-pet> -->     
 
             <form [formGroup]="form" class="form">
                 <div class="step1" *ngIf="false">
