@@ -15,12 +15,30 @@
 
 .custom-navbar {
 	border-bottom: #E6E6E7 solid 1px;
+	height: 80px;
 }
 
  .menu-container {
 	 display: flex;
 	 justify-content: center;
 	 width: 100%;
+	 
+	 .menu-booking-btn-wrapper{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.menu-booking-btn {
+			width: 143px;
+			height: 48px;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 0px 27px 0px 27px;
+			background-color: $green;
+			border-color: $green;
+			color: #FFFF;
+			border-radius: 50px;
+		 }
+	 }	
  } 
 
  .logo {
@@ -31,6 +49,7 @@
 
  .item {
 	margin-left: auto;
+	margin-right: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -48,40 +67,3 @@
 	}
 }
 
-.bg-img {
-	width: 100%;
-	height: 700px;
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-
-	.header-text-wraper {
-		display: flex;
-		flex-direction: column;
-		// margin-top: 164px;
-		// margin-left: 156px;
-		// position: absolute;
-		padding-top: 164px;
-		padding-left: 156px;
-
-		.header-text {
-			width: 411px;
-			height: 256px;
-			font-size: 42px;
-    		font-weight: bold;
-		}
-		.booking-btn {
-			margin-top: 42px;
-			width: 205px;
-			height: 65px;
-			font-size: 20px;
-			font-weight: bold;
-			padding: 0px 50px 7px 50px;
-			background-color: $green;
-			border-color: $green;
-			color: #FFFF;
-			border-radius: 50px;
-		}
-	}
-}
-  

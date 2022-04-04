@@ -4,11 +4,12 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { PromoComponent } from './components/promo/promo.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, PromoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
