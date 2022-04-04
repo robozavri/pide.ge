@@ -1,7 +1,7 @@
 import { CookieService } from 'ngx-cookie-service';
 import { TranslateService } from '@ngx-translate/core';
 import { langs } from '../constants/lang';
-import { ge, en } from '../constants/translate';
+import { ge, en, ru } from '../constants/translate';
 import { Injectable } from '@angular/core';
 
 const LOCAL_LANG_KEY = 'local-lang';
@@ -15,6 +15,7 @@ export class LangService {
     const lang = this.getCurrent() || langs.EN;
     this.translateService.setTranslation(langs.EN, en);
     this.translateService.setTranslation(langs.GE, ge);
+    this.translateService.setTranslation(langs.RU, ru);
     this.translateService.use(lang);
   }
 

@@ -1,9 +1,56 @@
-.lang-dropdown {
-	.arrow-icon {
-	  width: 10px;
-	}
-  }
+@import '../../../scss/abstracts/variables';
 
-  .custom-navbar {
-	  border-bottom: #E6E6E7 solid 1px;
-  }
+.lang-dropdown {
+	.flag {
+		width: 24px;
+	}
+	.arrow-icon {
+		width: 13.2px;
+		margin-left: 6px;
+	}
+}
+.lang-title {
+	margin-left: 5px;
+}
+// .lang-dropdown-container {
+// 	li {
+// 		display: flex;
+// 		flex-direction: row;
+// 	}
+// }
+
+.custom-navbar {
+	border-bottom: #E6E6E7 solid 1px;
+}
+
+ .menu-container {
+	 display: flex;
+	 justify-content: center;
+	 width: 100%;
+ } 
+
+ .logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+
+ .item {
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+  
+.main-menu {
+	display: flex;
+	margin-left: 40px;
+	margin-bottom: 0px;
+	li {
+		cursor: pointer;
+	}
+	li:hover {
+		background: none;
+	}
+}
+  

@@ -1,43 +1,35 @@
 export const ge = {
   HEADER: {
-    HOME: 'მთავარი',
-    ABOUT: 'ჩვენ შესახებ',
-    HOW_IT_WORKS: 'როგორ მუშაობს',
-    CAREERS: 'კარიერა',
-    CONTACT: 'კონტაქტი',
+    MENU: {
+      HOME: 'მთავარი',
+      BLOG: 'ბლოგი',
+      ABOUT: 'ჩვენ შესახებ',
+      CONTACT: 'კონტაქტი',
+      FAQ: 'ხდკ',
+    }
   },
-  CAREERS: {
-    FORM_TITLE: 'ჩვენ ყოველთვის ვეძებთ ნიჭიერ ადამიანებს',
-    SEND: 'გაგზავნა',
-  }
-
-
 }
 
 export const en = {
   HEADER: {
-    HOME: 'Home',
-    ABOUT: 'About',
-    HOW_IT_WORKS: 'How it works',
-    CAREERS: 'Careers',
-    CONTACT: 'Contact',
+    MENU: {
+      HOME: 'Home',
+      BLOG: 'Blog',
+      ABOUT: 'About',
+      CONTACT: 'Contact',
+      FAQ: 'Faq',
+    }
   },
-  CAREERS: {
-    FORM_TITLE: 'We are always looking for talented people',
-    SEND: 'Send',
-  }
 }
 
 export const ru = {
   HEADER: {
-    HOME: 'Главная',
-    ABOUT: 'О Компании',
-    HOW_IT_WORKS: 'Как это работает',
-    CAREERS: 'Карьера',
-    CONTACT: 'Контакты',
+    MENU: {
+      HOME: 'Главная',
+      BLOG: 'Блог',
+      ABOUT: 'О Компании',
+      CONTACT: 'Контакты',
+      FAQ: 'Вопросы',
+    }
   },
-  CAREERS: {
-    FORM_TITLE: 'Мы всегда ищем талантливых людей',
-    SEND: 'Отправить',
-  }
 }

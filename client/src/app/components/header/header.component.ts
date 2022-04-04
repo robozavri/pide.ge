@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LangService } from 'src/app/shared/services/lang.service';
+import { langs } from 'src/app/shared/constants/lang';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+  langs: any = langs;
+
+
+  constructor(
+    public langService: LangService,
+  ) { }
+
+
   ngOnInit() {
 
   }

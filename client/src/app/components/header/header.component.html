@@ -1,23 +1,34 @@
 <!-- <app-main-nav></app-main-nav> -->
 
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid">
-
-        <div id="logo"><a href="#"><img src="assets/logo.svg" alt="pide" /></a></div>
-            
-        <div>
+<nav class="navbar custom-navbar">
+    <div class="container">
+      <div class="menu-container">
+        <div class="logo">
+          <a href="#"><img src="assets/logo.svg" alt="pide" /></a>
+        </div>
+        <ul class="main-menu">
+          <li mat-menu-item><span>{{'HEADER.MENU.HOME' | translate}} </span></li>
+          <li mat-menu-item><span>{{'HEADER.MENU.BLOG' | translate}}</span></li>
+          <li mat-menu-item><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
+          <li mat-menu-item><span>{{'HEADER.MENU.CONTACT' | translate}}</span></li>
+          <li mat-menu-item><span>{{'HEADER.MENU.FAQ' | translate}}</span></li>
+        </ul>
+        <div class="item">
             <div mat-button [matMenuTriggerFor]="menu">
               <span class="lang-dropdown">
-                <img src="assets/icons/flags/flag_ge.svg" alt="pide"/>
-                <img class="arrow-icon" src="https://pide.ge/images/arrow.png" alt="pide"/>
+                <img *ngIf="langService.getCurrent() === langs.GE" class="flag" src="assets/icons/flags/flag_ge.svg" alt="pide"/>
+                <img *ngIf="langService.getCurrent() === langs.EN" class="flag" src="assets/icons/flags/flag_en.svg" alt="pide"/>
+                <img *ngIf="langService.getCurrent() === langs.RU" class="flag" src="assets/icons/flags/flag_ru.svg" alt="pide"/>
+                <img class="arrow-icon" src="assets/icons/arrow.png" alt="pide"/>
               </span> 
             </div>
-            <mat-menu #menu="matMenu">
-              <li mat-menu-item><span><img src="assets/icons/flags/flag_ge.svg" alt="pide"/></span> <span>GEO</span> </li>
-              <li mat-menu-item><img src="assets/icons/flags/flag_en.svg" alt="pide"/><span>ENG</span></li>
-              <li mat-menu-item><img src="assets/icons/flags/flag_ru.svg" alt="pide"/><span>RUS</span></li>       
+            <mat-menu #menu="matMenu" class="lang-dropdown-container">
+              <li mat-menu-item (click)="langService.use(langs.GE)"><img src="assets/icons/flags/flag_ge.svg" alt="pide"/><span class="lang-title">GEO</span></li>
+              <li mat-menu-item (click)="langService.use(langs.EN)"><img src="assets/icons/flags/flag_en.svg" alt="pide"/><span class="lang-title">ENG</span></li>
+              <li mat-menu-item (click)="langService.use(langs.RU)"><img src="assets/icons/flags/flag_ru.svg" alt="pide"/><span class="lang-title">RUS</span></li>
             </mat-menu>
-          </div>
+        </div>
+      </div>   
      
     </div>
   </nav>
