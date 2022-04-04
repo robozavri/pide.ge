@@ -6,7 +6,8 @@ export const ge = {
       ABOUT: 'ჩვენ შესახებ',
       CONTACT: 'კონტაქტი',
       FAQ: 'ხდკ',
-    }
+    },
+    BOOKING: 'დაჯავშნა'
   },
 }
 
@@ -18,7 +19,8 @@ export const en = {
       ABOUT: 'About',
       CONTACT: 'Contact',
       FAQ: 'Faq',
-    }
+    },
+    BOOKING: 'Booking'
   },
 }
 
@@ -30,6 +32,7 @@ export const ru = {
       ABOUT: 'О Компании',
       CONTACT: 'Контакты',
       FAQ: 'Вопросы',
-    }
+    },
+    BOOKING: 'Бронирование'
   },
 }
