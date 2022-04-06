@@ -4,13 +4,22 @@
 //     float: right;
 // }
 
+.section-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 .section-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 45px;
     // width: 100%;
-    padding: 25px;
+
+    margin-left: 16px;
+    margin-right: 16px;
 
     .carousel {
         width: 100%;

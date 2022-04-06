@@ -1,17 +1,23 @@
 .section-title {
     font-weight: bold;
     font-size: 25px;
+    margin-top: 73px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .section-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 45px;
+    margin-left: 16px;
+    margin-right: 16px;
 
     .card-tem {
         display: flex;
         flex-direction: column;
         margin-right: 25px;
+        margin-bottom: 25px;
 
         width: 360px;
         height: 212px;
@@ -26,6 +32,32 @@
         .card-tem-description {
             margin-top: 16px;
             font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1011px) {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-tem {
+            width: 100%;            
+            height: 307px;
+        }
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-tem {
+            width: 100%;            
+            height: 307px;
         }
     }
 }

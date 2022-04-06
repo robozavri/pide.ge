@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromoComponent implements OnInit {
 
+  screenSize = 0;
   constructor() { }
 
   ngOnInit(): void {
+    this.screenSize = window.innerWidth;
   }
 
 }
