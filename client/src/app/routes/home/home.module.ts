@@ -8,11 +8,12 @@ import { PromoComponent } from './components/promo/promo.component';
 import { WhyPideComponent } from './components/why-pide/why-pide.component';
 import { FriendStoriesComponent } from './components/friend-stories/friend-stories.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RequestedWalkersComponent } from './components/requested-walkers/requested-walkers.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, PromoComponent, WhyPideComponent, FriendStoriesComponent],
+  declarations: [HomeComponent, PromoComponent, WhyPideComponent, FriendStoriesComponent, RequestedWalkersComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

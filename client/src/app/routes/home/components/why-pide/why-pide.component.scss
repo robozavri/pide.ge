@@ -20,7 +20,7 @@
         margin-bottom: 25px;
 
         width: 360px;
-        height: 212px;
+        // height: 212px;
         background-color: #fff;
         border-radius: 16px;
         padding: 25px;
@@ -32,6 +32,7 @@
         .card-tem-description {
             margin-top: 16px;
             font-size: 16px;
+            overflow: hidden;
         }
     }
 }
