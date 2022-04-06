@@ -1,0 +1,62 @@
+
+
+// .owl-theme .owl-nav {
+//     float: right;
+// }
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 45px;
+    // width: 100%;
+    padding: 25px;
+
+    .carousel {
+        width: 100%;
+    }
+
+    .card-tem {
+        display: flex;
+        flex-direction: column;
+        // margin-left: 25px;
+        justify-content: space-between;
+        // width: 100%;
+        // margin-right: 25px;
+        // width: 360px;
+        // height: 212px;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 25px;
+
+
+        .card-item-header {
+            display: flex;
+            flex-direction: row;
+            .card-header-img {
+                width: 72px;
+                height: 72px;
+            }
+            .username {
+                margin-left: 25px;
+                padding-top: 22px;
+                font-weight: bold;
+            }
+            .card-header-quote {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .card-header-quote {
+            margin-left: auto;
+        }
+        .card-tem-title {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .card-tem-description {
+            margin-top: 16px;
+            font-size: 16px;
+        }
+    }
+}

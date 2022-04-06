@@ -59,8 +59,11 @@
 	display: flex;
 	margin-left: 40px;
 	margin-bottom: 0px;
+
 	li {
 		cursor: pointer;
+		font-family: 'TBCContractica';
+		font-size: 16;
 	}
 	li:hover {
 		background: none;
