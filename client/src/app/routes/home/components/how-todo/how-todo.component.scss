@@ -1,0 +1,134 @@
+.section-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 47px;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    .card-tem {
+        border-radius: 16px;
+        padding: 24px 24px 0px 24px;
+        background-color: #fff;
+        width: 50%;
+    
+        .list-item {
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+           
+            .divider {
+                border-top: 2px solid #E7E7EB;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        
+            margin-left: 25px;
+            .step-title {
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .banner {
+        width: 50%;
+        margin-left: 24px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-container {
+        display: flex;
+        flex-direction: row;
+        .card-tem {
+            width: 46%;
+        }
+        .banner {
+            width: 56%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+
+        .card-tem {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        .banner {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+}
+
+//
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+
+       
+
+        .card-tem {
+            width: 100%;
+            margin-bottom: 24px;
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                img {
+                   width: 100%;
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 499px) {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+
+        .card-tem {
+            width: 100%;
+            margin-bottom: 24px;
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                img {
+                   width: 100%;
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+}
+
+
+
