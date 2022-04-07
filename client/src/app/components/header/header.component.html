@@ -4,10 +4,10 @@
     <div class="container">
       <div class="menu-container">
         <div class="logo">
-          <a href="#"><img src="assets/logo.svg" alt="pide" /></a>
+          <a href="/"><img src="assets/logo.svg" alt="pide" /></a>
         </div>
         <ul class="main-menu">
-          <li mat-menu-item><span>{{'HEADER.MENU.HOME' | translate}} </span></li>
+          <li mat-menu-item [routerLink]="[ '/']"><span>{{'HEADER.MENU.HOME' | translate}} </span></li>
           <li mat-menu-item><span><a class="link" href="https://pide.ge/pide-blogebi/Blog/">{{'HEADER.MENU.BLOG' | translate}}</a></span></li>
           <li mat-menu-item [routerLink]="[ '/about-us']"><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
           <li mat-menu-item [routerLink]="[ '/contact']"><span>{{'HEADER.MENU.CONTACT' | translate}}</span></li>
@@ -36,3 +36,5 @@
      
     </div>
   </nav>
+
+  

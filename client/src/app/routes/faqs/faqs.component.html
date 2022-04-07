@@ -1,64 +1,65 @@
 <app-header></app-header>
-<div class="container">
-    <div class="title">
-        <h1 >ხშირად დასმული კითხვები</h1>
-     </div>
-    <div class="section-container"> 
-        <div class="left-column">
-            <div class="card-tem" (click)="setActiveFaq(1)">
-                <div class="header" [class.faq-header-active]="activeFaq == 1" >
-                    <div class="faq-icon">
-                        <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 1">
-                        <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 1">
+<div class="faqs">
+    <div class="container">
+        <div class="title">
+            <h1 >ხშირად დასმული კითხვები</h1>
+         </div>
+        <div class="section-container"> 
+            <div class="left-column">
+                <div class="card-tem" (click)="setActiveFaq(1)">
+                    <div class="header" [class.faq-header-active]="activeFaq == 1" >
+                        <div class="faq-icon">
+                            <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 1">
+                            <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 1">
+                        </div>
+                        <div class="faq-title">
+                            რა არის პაიდი?
+                        </div>
                     </div>
-                    <div class="faq-title">
-                        რა არის პაიდი?
+                    <div class="faq-content" [class.faq-content-active]="activeFaq == 1">
+                        At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
                     </div>
-                </div>
-                <div class="faq-content" [class.faq-content-active]="activeFaq == 1">
-                    At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
-                </div>
-            </div>    
-            <div class="card-tem" (click)="setActiveFaq(2)">
-                <div class="header" [class.faq-header-active]="activeFaq == 2" >
-                    <div class="faq-icon">
-                        <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 2">
-                        <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 2">
+                </div>    
+                <div class="card-tem" (click)="setActiveFaq(2)">
+                    <div class="header" [class.faq-header-active]="activeFaq == 2" >
+                        <div class="faq-icon">
+                            <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 2">
+                            <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 2">
+                        </div>
+                        <div class="faq-title">
+                            ჩემს ძაღლს ინდივიდუალურად გაასეირნებთ?
+                        </div>
                     </div>
-                    <div class="faq-title">
-                        ჩემს ძაღლს ინდივიდუალურად გაასეირნებთ?
+                    <div class="faq-content" [class.faq-content-active]="activeFaq == 2">
+                        At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
                     </div>
-                </div>
-                <div class="faq-content" [class.faq-content-active]="activeFaq == 2">
-                    At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
-                </div>
-            </div> 
+                </div> 
+            </div>
+            <div class="right-column">
+                <div class="card-tem" (click)="setActiveFaq(3)">
+                    <div class="header" [class.faq-header-active]="activeFaq == 3" >
+                        <div class="faq-icon">
+                            <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 3">
+                            <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 3">
+                        </div>
+                        <div class="faq-title">
+                            როგორ ხდება თანხის გადახდა?
+                        </div>
+                    </div>
+                    <div class="faq-content" [class.faq-content-active]="activeFaq == 3">
+                        At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
+                    </div>
+                </div>   
+            </div>
+            
+           
         </div>
-        <div class="right-column">
-            <div class="card-tem" (click)="setActiveFaq(3)">
-                <div class="header" [class.faq-header-active]="activeFaq == 3" >
-                    <div class="faq-icon">
-                        <img src="/assets/icons/add.png" alt="" *ngIf="activeFaq !== 3">
-                        <img src="/assets/icons/minus.png" alt="" *ngIf="activeFaq == 3">
-                    </div>
-                    <div class="faq-title">
-                        როგორ ხდება თანხის გადახდა?
-                    </div>
-                </div>
-                <div class="faq-content" [class.faq-content-active]="activeFaq == 3">
-                    At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers.
-                </div>
-            </div>   
+        <div class="banner-wraper">    
+            <div class="banner">
+                <img src="/assets/images/Group 2290 (1).png" alt="">
+                <button class="btn booking-btn">{{'HEADER.BOOKING' | translate}}</button>
+            </div>     
         </div>
-        
-       
-    </div>
-    <div class="banner-wraper">    
-        <div class="banner">
-            <img src="/assets/images/Group 2290 (1).png" alt="">
-            <button class="btn booking-btn">{{'HEADER.BOOKING' | translate}}</button>
-        </div>     
-    </div>
+    </div>    
 </div>
-
 <app-footer></app-footer>
