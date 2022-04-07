@@ -1,1 +1,33 @@
-<p>footer works!</p>
+<div class="footer">
+    <div class="logo">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div class="columns">
+        <div class="list">
+            <div class="list-title">{{'FOOTER.APP_SOON' | translate}}</div>
+            <div>
+                <img src="/assets/images/apple-store.png" alt="">
+            </div>
+            <div>
+                <img src="/assets/images/google-store.png" alt="">
+            </div>
+            <div>
+                © Pide 2021-2023
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-title">{{'FOOTER.PIDE_LINKS' | translate}}</div>
+            <div><a class="link" href="https://pide.ge/pide-blogebi/Blog/">{{'HEADER.MENU.BLOG' | translate}}</a></div>
+            <div [routerLink]="[ '/about-us']">{{'HEADER.MENU.ABOUT' | translate}}</div>
+            <div [routerLink]="[ '/contact']">{{'HEADER.MENU.CONTACT' | translate}}</div>
+            <div [routerLink]="[ '/policy']">{{'FOOTER.POLICY' | translate}}</div>
+            <div  [routerLink]="[ '/pivacy']">{{'FOOTER.PRIVACY' | translate}}</div>
+        </div>
+        <div class="list">
+            <div class="list-title">{{'FOOTER.FOLLOW' | translate}}</div>
+            <div> <a class="link" href="#"><img src="/assets/icons/facebook.png" alt=""> Pide პაიდი</a> </div>
+            <div> <a class="link" href="#"><img src="/assets/icons/instagram.png" alt=""> Pide life</a> </div>
+            <div> <a class="link" href="#"><img src="/assets/icons/youtube.png" alt=""> Pide pet care</a> </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,13 @@ export const ge = {
     },
     BOOKING: 'დაჯავშნა'
   },
+  FOOTER: {
+    POLICY: 'წესები და პირობები',
+    PRIVACY: 'კონფედენციალურობის პოლიტიკა',
+    FOLLOW: 'გამოგვყევით',
+    PIDE_LINKS: 'პაიდის ბმულები',
+    APP_SOON: 'აპლიკაცია მალე',
+  }
 }
 
 export const en = {
@@ -22,6 +29,14 @@ export const en = {
     },
     BOOKING: 'Booking'
   },
+  FOOTER: {
+    POLICY: 'Policy',
+    PRIVACY: 'Privacy',
+    FOLLOW: 'Follow',
+    PIDE_LINKS: 'Pide links',
+    APP_SOON: 'App soon',
+
+  }
 }
 
 export const ru = {
@@ -35,4 +50,11 @@ export const ru = {
     },
     BOOKING: 'Бронирование'
   },
+  FOOTER: {
+    POLICY: 'Policy',
+    PRIVACY: 'Privacy',
+    FOLLOW: 'Follow',
+    PIDE_LINKS: 'Pide links',
+    APP_SOON: 'App soon',
+  }
 }
