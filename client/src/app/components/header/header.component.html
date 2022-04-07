@@ -9,7 +9,7 @@
         <ul class="main-menu">
           <li mat-menu-item><span>{{'HEADER.MENU.HOME' | translate}} </span></li>
           <li mat-menu-item><span>{{'HEADER.MENU.BLOG' | translate}}</span></li>
-          <li mat-menu-item><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
+          <li mat-menu-item [routerLink]="[ '/about-us']"><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
           <li mat-menu-item><span>{{'HEADER.MENU.CONTACT' | translate}}</span></li>
           <li mat-menu-item><span>{{'HEADER.MENU.FAQ' | translate}}</span></li>
         </ul>
