@@ -10,11 +10,12 @@ import { FriendStoriesComponent } from './components/friend-stories/friend-stori
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RequestedWalkersComponent } from './components/requested-walkers/requested-walkers.component';
 import { HowTodoComponent } from './components/how-todo/how-todo.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, PromoComponent, WhyPideComponent, FriendStoriesComponent, RequestedWalkersComponent, HowTodoComponent],
+  declarations: [HomeComponent, PromoComponent, WhyPideComponent, FriendStoriesComponent, RequestedWalkersComponent, HowTodoComponent, FaqComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
