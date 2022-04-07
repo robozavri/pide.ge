@@ -26,6 +26,10 @@ const routes: Routes = [
 				loadChildren: () => import('./routes/privacy/privacy.module').then(m => m.PrivacyModule)
 			},
 			{
+				path: 'faq',
+				loadChildren: () => import('./routes/faqs/faqs.module').then(m => m.FaqsModule)
+			},
+			{
 				path: 'login',
 				loadChildren: () => import('./routes/login/login.module').then(m => m.LoginModule)
 			},

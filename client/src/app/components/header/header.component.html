@@ -11,7 +11,7 @@
           <li mat-menu-item><span>{{'HEADER.MENU.BLOG' | translate}}</span></li>
           <li mat-menu-item [routerLink]="[ '/about-us']"><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
           <li mat-menu-item><span>{{'HEADER.MENU.CONTACT' | translate}}</span></li>
-          <li mat-menu-item><span>{{'HEADER.MENU.FAQ' | translate}}</span></li>
+          <li mat-menu-item [routerLink]="[ '/faq']"><span>{{'HEADER.MENU.FAQ' | translate}}</span></li>
         </ul>
         <div class="item">
             <div mat-button [matMenuTriggerFor]="menu">
