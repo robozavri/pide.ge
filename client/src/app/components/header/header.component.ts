@@ -10,7 +10,8 @@ import { langs } from 'src/app/shared/constants/lang';
 export class HeaderComponent implements OnInit {
 
   langs: any = langs;
-
+  screenSize: number;
+  showMobileMenu = false;
 
   constructor(
     public langService: LangService,
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.screenSize = window.innerWidth;
   }
 
 }

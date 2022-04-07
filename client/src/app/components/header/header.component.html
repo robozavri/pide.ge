@@ -1,5 +1,45 @@
+<nav class="navbar custom-navbar" *ngIf="screenSize < 992">
+  <div class="container">
+    <div class="mobile-menu-container">
+      <div>
+        <img src="/assets/icons/burger-menu.png" alt="" *ngIf="!showMobileMenu" (click)="showMobileMenu = !showMobileMenu">
+        <img src="/assets/icons/delete.png" alt="" *ngIf="showMobileMenu" (click)="showMobileMenu = !showMobileMenu">
+      </div>
+      <div class="logo">
+        <a href="/"><img src="assets/logo.svg" alt="pide" /></a>
+      </div>    
+      <div >
+          <div mat-button [matMenuTriggerFor]="menu">
+            <span class="lang-dropdown">
+              <img *ngIf="langService.getCurrent() === langs.GE" class="flag" src="assets/icons/flags/flag_ge.svg" alt="pide"/>
+              <img *ngIf="langService.getCurrent() === langs.EN" class="flag" src="assets/icons/flags/flag_en.svg" alt="pide"/>
+              <img *ngIf="langService.getCurrent() === langs.RU" class="flag" src="assets/icons/flags/flag_ru.svg" alt="pide"/>
+              <img class="arrow-icon" src="assets/icons/arrow.png" alt="pide"/>
+            </span> 
+          </div>
+          <mat-menu #menu="matMenu" class="lang-dropdown-container">
+            <li mat-menu-item (click)="langService.use(langs.GE)"><img src="assets/icons/flags/flag_ge.svg" alt="pide"/><span class="lang-title">GEO</span></li>
+            <li mat-menu-item (click)="langService.use(langs.EN)"><img src="assets/icons/flags/flag_en.svg" alt="pide"/><span class="lang-title">ENG</span></li>
+            <li mat-menu-item (click)="langService.use(langs.RU)"><img src="assets/icons/flags/flag_ru.svg" alt="pide"/><span class="lang-title">RUS</span></li>
+          </mat-menu>
+      </div>
 
-<nav class="navbar custom-navbar">
+    </div>   
+   
+  </div>
+</nav> 
+
+<div class="mobile-nav" *ngIf="showMobileMenu">
+  <ul class="mobile-menu">
+    <li mat-menu-item [routerLink]="[ '/']"><span>{{'HEADER.MENU.HOME' | translate}} </span></li>
+    <li mat-menu-item><span><a class="link" href="https://pide.ge/pide-blogebi/Blog/">{{'HEADER.MENU.BLOG' | translate}}</a></span></li>
+    <li mat-menu-item [routerLink]="[ '/about-us']"><span>{{'HEADER.MENU.ABOUT' | translate}}</span></li>
+    <li mat-menu-item [routerLink]="[ '/contact']"><span>{{'HEADER.MENU.CONTACT' | translate}}</span></li>
+    <li mat-menu-item [routerLink]="[ '/faq']"><span>{{'HEADER.MENU.FAQ' | translate}}</span></li>
+  </ul>
+</div>
+
+<nav class="navbar custom-navbar" *ngIf="screenSize > 992">
     <div class="container">
       <div class="menu-container">
         <div class="logo">
@@ -35,5 +75,6 @@
      
     </div>
 </nav> 
+
 
   
