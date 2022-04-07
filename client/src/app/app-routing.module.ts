@@ -18,6 +18,14 @@ const routes: Routes = [
 				loadChildren: () => import('./routes/about-us/about-us.module').then(m => m.AboutUsModule)
 			},
 			{
+				path: 'policy',
+				loadChildren: () => import('./routes/policy/policy.module').then(m => m.PolicyModule)
+			},
+			{
+				path: 'privacy',
+				loadChildren: () => import('./routes/privacy/privacy.module').then(m => m.PrivacyModule)
+			},
+			{
 				path: 'login',
 				loadChildren: () => import('./routes/login/login.module').then(m => m.LoginModule)
 			},
