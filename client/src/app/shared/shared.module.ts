@@ -8,25 +8,9 @@ import { LangService } from './services/lang.service';
 import { CookieService } from 'ngx-cookie-service';
 
 
-import {
-  MatSidenavModule,
-  MatButtonModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatNativeDateModule,
-  MatSnackBarModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatCheckboxModule,
-  MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
-import { CreatePetComponent } from './components/create-pet/create-pet.component';
-
 @NgModule({
   declarations: [
     ResourceUrlPipe,
-    CreatePetComponent
   ],
   imports: [
     CommonModule,
@@ -34,18 +18,6 @@ import { CreatePetComponent } from './components/create-pet/create-pet.component
     RouterModule,
     ReactiveFormsModule,
     TranslateModule,
-
-    MatSidenavModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatCheckboxModule,
   ],
   exports: [
     FormsModule,
@@ -53,20 +25,6 @@ import { CreatePetComponent } from './components/create-pet/create-pet.component
     ReactiveFormsModule,
     ResourceUrlPipe,
     TranslateModule,
-
-    MatSidenavModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatCheckboxModule,
-
-    CreatePetComponent,
   ],
 })
 export class SharedModule {
@@ -74,9 +32,6 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
-        {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {
-          duration: 2500,
-        }},
         LangService,
         TranslateService,
         CookieService,
