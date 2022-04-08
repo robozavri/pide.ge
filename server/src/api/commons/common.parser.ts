@@ -19,5 +19,8 @@ function parseCommon(body: any) {
   return _.pick(body, [
     'promo',
     'contacts',
+    'aboutUs',
+    'policy',
+    'privacy',
   ]);
 }
