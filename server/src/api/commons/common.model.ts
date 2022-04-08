@@ -5,7 +5,6 @@ import imageSchema from '../../schemas/image.schema';
 const contactSchema = {
     email: String,
     phone: String,
-    facebook: String,
 };
 
 const promoSchema = {
@@ -13,9 +12,22 @@ const promoSchema = {
     image: imageSchema,
 };
 
+const aboutUsSchema = {
+    content: multilingualSchema,
+};
+const policySchema = {
+    content: multilingualSchema,
+};
+const privacySchema = {
+    content: multilingualSchema,
+};
+
 const CommonSchema = new Schema({
     promo: promoSchema,
     contacts: contactSchema,
+    aboutUs: aboutUsSchema,
+    policy: policySchema,
+    privacy: privacySchema,
 });
 
 export default model('Common', CommonSchema);

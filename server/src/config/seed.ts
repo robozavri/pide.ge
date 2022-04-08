@@ -4,12 +4,14 @@ import { roles } from '../constants/user';
 import * as _ from 'lodash';
 
 import * as UserDao from '../api/users/user.dao';
+import * as CommonDao from '../api/commons/common.dao';
 import * as MetaDao from '../api/metas/meta.dao';
 import * as StoryDao from '../api/stories/stories.dao';
 import * as RequestedWalkerDao from '../api/requested-walkers/requested-walkers.dao';
 import * as FaqDao from '../api/faqs/faqs.dao';
 
 import * as UserStub from '../stubs/user.stub';
+import * as CommonStub from '../stubs/common.stub';
 import * as MetaStub from '../stubs/meta.stub';
 import * as StoryStub from '../stubs/stories.stub';
 import * as RequestedWalkerStub from '../stubs/requested-walkers.stub';
@@ -31,6 +33,7 @@ export async function seedDB() {
 
 export async function seedDBDevelopment() {
   await UserDao.insertMany(getAdmin());
+  await CommonDao.create(CommonStub.getSingle());
   await MetaDao.create(MetaStub.getSingle());
   await StoryDao.insertMany(StoryStub.getMany(11));
   await RequestedWalkerDao.insertMany(RequestedWalkerStub.getMany(11));
@@ -42,6 +45,7 @@ export async function seedDBDevelopment() {
 
 export async function seedDBProduction() {
   await UserDao.insertMany(getAdmin());
+  await CommonDao.create(CommonStub.getSingle());
   await MetaDao.create(MetaStub.getSingle());
   await StoryDao.insertMany(StoryStub.getMany(11));
   await RequestedWalkerDao.insertMany(RequestedWalkerStub.getMany(11));
@@ -53,6 +57,7 @@ export async function seedDBProduction() {
 
 export async function clearDBDevelopment() {
   await UserDao.destroyAll();
+  await CommonDao.destroyAll();
   await MetaDao.destroyAll();
   await StoryDao.destroyAll();
   await RequestedWalkerDao.destroyAll();
@@ -61,6 +66,7 @@ export async function clearDBDevelopment() {
 
 export async function clearDBProduction() {
   await UserDao.destroyAll();
+  await CommonDao.destroyAll();
   await MetaDao.destroyAll();
   await StoryDao.destroyAll();
   await RequestedWalkerDao.destroyAll();
