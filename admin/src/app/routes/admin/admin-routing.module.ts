@@ -28,6 +28,14 @@ const routes: Routes = [
         loadChildren: './routes/stories/stories.module#StoriesModule'
       },
       {
+        path: 'faqs',
+        loadChildren: './routes/faqs/faqs.module#FaqsModule'
+      },
+      {
+        path: 'faq/:id',
+        loadChildren: './routes/faq/faq.module#FaqModule'
+      },
+      {
         path: 'meta',
         loadChildren: './routes/meta/meta.module#MetaModule'
       },

@@ -59,6 +59,7 @@ import { SnackBarService } from './services/snack-bar.service';
 import { StoryApiService } from './http/story-api.service';
 import { ImagesUploadComponent } from './components/images-upload/images-upload.component';
 import { RequestedWalkerApiService } from './http/requested-walker-api.service';
+import { FaqApiService } from './http/faq-api.service';
 
 
 @NgModule({
@@ -184,6 +185,7 @@ export class SharedModule {
         SnackBarService,
         StoryApiService,
         RequestedWalkerApiService,
+        FaqApiService,
       ]
     };
   }
