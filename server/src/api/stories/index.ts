@@ -1,26 +1,26 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import * as blogCategoriesDao from './blog-categories.dao';
-import * as blogCategoriesParser  from './blog-categories.parser';
+import * as storiesDao from './stories.dao';
+import * as storiesParser  from './stories.parser';
 import * as auth from '../../auth';
 
 
-const blogCategoriesRouter = Router();
+const storiesRouter = Router();
 
-blogCategoriesRouter.get('/', blogCategoriesParser.parseGetByQuery, getByQuery);
-blogCategoriesRouter.post('/', auth.isAdmin, blogCategoriesParser.parseCreate, create);
-blogCategoriesRouter.put('/:id', auth.isAdmin, blogCategoriesParser.parseUpdate, update);
-blogCategoriesRouter.delete('/:id', auth.isAdmin, destroy);
-blogCategoriesRouter.patch('/positions', blogCategoriesParser.parseUpdatePositions, updatePositions);
+storiesRouter.get('/', storiesParser.parseGetByQuery, getByQuery);
+storiesRouter.post('/', auth.isAdmin, storiesParser.parseCreate, create);
+storiesRouter.put('/:id', auth.isAdmin, storiesParser.parseUpdate, update);
+storiesRouter.delete('/:id', auth.isAdmin, destroy);
+storiesRouter.patch('/positions', storiesParser.parseUpdatePositions, updatePositions);
 
-export default blogCategoriesRouter;
+export default storiesRouter;
 
 // =============== GET ===============
 
 async function getByQuery(req: Request, res: Response, next: NextFunction) {
   try {
     const query = req.query;
-    const blogCategoriesData = await blogCategoriesDao.getByQuery(query);
-    res.json(blogCategoriesData);
+    const storiesData = await storiesDao.getByQuery(query);
+    res.json(storiesData);
   } catch (e) {
     next(e);
   }
@@ -31,7 +31,7 @@ async function getByQuery(req: Request, res: Response, next: NextFunction) {
 async function create(req: Request, res: Response, next: NextFunction) {
   try {
     const payload = req.body;
-    await blogCategoriesDao.create({ ...payload, position: 0 });
+    await storiesDao.create({ ...payload, position: 0 });
     res.sendStatus(201);
   } catch (e) {
     next(e);
@@ -41,7 +41,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
 async function update(req: Request, res: Response, next: NextFunction) {
   try {
     const payload = req.body;
-    await blogCategoriesDao.update(payload._id, payload);
+    await storiesDao.update(payload._id, payload);
     res.sendStatus(200);
   } catch (e) {
     next(e);
@@ -52,7 +52,7 @@ async function updatePositions(req: Request, res: Response, next: NextFunction) 
   try {
     const payload = req.body;
     await payload.items.map((item: any) => {
-      blogCategoriesDao.update(item._id, { position: item.position });
+      storiesDao.update(item._id, { position: item.position });
     });
     res.sendStatus(200);
   } catch (e) {
@@ -63,7 +63,7 @@ async function updatePositions(req: Request, res: Response, next: NextFunction) 
 async function destroy(req: Request, res: Response, next: NextFunction) {
   try {
     const { id } = req.params;
-    await blogCategoriesDao.destroy(id);
+    await storiesDao.destroy(id);
     res.sendStatus(200);
   } catch (e) {
     next(e);

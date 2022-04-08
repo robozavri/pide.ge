@@ -1,26 +1,26 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import * as blogDao from './blog.dao';
-import * as blogParser  from './blog.parser';
+import * as faqsDao from './faqs.dao';
+import * as faqsParser  from './faqs.parser';
 import * as auth from '../../auth';
 
 
-const blogRouter = Router();
+const faqsRouter = Router();
 
-blogRouter.get('/', blogParser.parseGetByQuery, getByQuery);
-blogRouter.post('/', auth.isAdmin, blogParser.parseCreate, create);
-blogRouter.put('/:id', auth.isAdmin, blogParser.parseUpdate, update);
-blogRouter.delete('/:id', auth.isAdmin, destroy);
-blogRouter.patch('/positions', blogParser.parseUpdatePositions, updatePositions);
+faqsRouter.get('/', faqsParser.parseGetByQuery, getByQuery);
+faqsRouter.post('/', auth.isAdmin, faqsParser.parseCreate, create);
+faqsRouter.put('/:id', auth.isAdmin, faqsParser.parseUpdate, update);
+faqsRouter.delete('/:id', auth.isAdmin, destroy);
+faqsRouter.patch('/positions', faqsParser.parseUpdatePositions, updatePositions);
 
-export default blogRouter;
+export default faqsRouter;
 
 // =============== GET ===============
 
 async function getByQuery(req: Request, res: Response, next: NextFunction) {
   try {
     const query = req.query;
-    const blogData = await blogDao.getByQuery(query);
-    res.json(blogData);
+    const faqsData = await faqsDao.getByQuery(query);
+    res.json(faqsData);
   } catch (e) {
     next(e);
   }
@@ -31,7 +31,7 @@ async function getByQuery(req: Request, res: Response, next: NextFunction) {
 async function create(req: Request, res: Response, next: NextFunction) {
   try {
     const payload = req.body;
-    await blogDao.create({ ...payload, position: 0 });
+    await faqsDao.create({ ...payload, position: 0 });
     res.sendStatus(201);
   } catch (e) {
     next(e);
@@ -41,7 +41,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
 async function update(req: Request, res: Response, next: NextFunction) {
   try {
     const payload = req.body;
-    await blogDao.update(payload._id, payload);
+    await faqsDao.update(payload._id, payload);
     res.sendStatus(200);
   } catch (e) {
     next(e);
@@ -52,7 +52,7 @@ async function updatePositions(req: Request, res: Response, next: NextFunction) 
   try {
     const payload = req.body;
     await payload.items.map((item: any) => {
-      blogDao.update(item._id, { position: item.position });
+      faqsDao.update(item._id, { position: item.position });
     });
     res.sendStatus(200);
   } catch (e) {
@@ -63,7 +63,7 @@ async function updatePositions(req: Request, res: Response, next: NextFunction) 
 async function destroy(req: Request, res: Response, next: NextFunction) {
   try {
     const { id } = req.params;
-    await blogDao.destroy(id);
+    await faqsDao.destroy(id);
     res.sendStatus(200);
   } catch (e) {
     next(e);

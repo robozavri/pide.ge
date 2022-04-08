@@ -12,8 +12,13 @@ export function parseGetByQuery(req: Request, res: Response, next: NextFunction)
       ...parseId(query),
     },
     ...parseSearch(query),
+    ...parseQueryPopulate(query),
   };
   next();
+}
+
+function parseQueryPopulate({ populate }: any) {
+  return populate ? { populate } : {};
 }
 
 function parseId({ _id }: { _id?: any }) {
@@ -23,7 +28,12 @@ function parseId({ _id }: { _id?: any }) {
 function parseSearch({ keyword }: { keyword?: string }) {
   return keyword ? {
     or: [
-      { title: { $regex: keyword, $options: 'i' } },
+      { 'question.en': { $regex: keyword, $options: 'i' } },
+      { 'question.ge': { $regex: keyword, $options: 'i' } },
+      { 'question.ru': { $regex: keyword, $options: 'i' } },
+      { 'answer.en': { $regex: keyword, $options: 'i' } },
+      { 'answer.ge': { $regex: keyword, $options: 'i' } },
+      { 'answer.ru': { $regex: keyword, $options: 'i' } },
     ],
   } : {};
 }
@@ -31,24 +41,26 @@ function parseSearch({ keyword }: { keyword?: string }) {
 // =============== POST ===============
 
 export function parseCreate(req: Request, res: Response, next: NextFunction) {
-  req.body = parseBaseProps(req.body);
-    next();
+  req.body = parseBaseProps(req.body),
+  next();
 }
 
 export function parseUpdate(req: Request, res: Response, next: NextFunction) {
-  req.body = parseBaseProps(req.body);
+  req.body = {
+    _id: req.body._id,
+    ...parseBaseProps(req.body)
+  };
+  next();
+}
+
+export function parseUpdatePositions(req: Request, res: Response, next: NextFunction) {
+  req.body = { items: req.body.items };
   next();
 }
 
 function parseBaseProps(body: any) {
   return _.pick(body, [
-    'title',
-    'start',
-    'end',
-    'color',
-    'meta',
-    'draggable',
-    'startTime',
-    'endTime',
+    'question',
+    'answer',
   ]);
 }

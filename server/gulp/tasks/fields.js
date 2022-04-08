@@ -49,38 +49,28 @@ export const selectFields = {
 }
 
 export const fields = {
-  id: 'Number',
-  category: 'Reference',
+  question: 'multilingualSchema',
+  answer: 'multilingualSchema',
+}
+
+
+/*
+// requested walkers
   name: 'multilingualSchema',
   description: 'multilingualSchema',
-  fbImage: 'imageSchema',
-  thumbnail: 'imageSchema',
-  views: 'Number',
-  liked: 'Number',
-  readTime: 'Number',
-  updateDate: 'Date',
-  createDate: 'Date',
-  status: 'String',
-  meta: 'Meta',
-  // testNumber: 'Number',
-  // testDate: 'Date',
-  // testMultilingual: 'multilingualSchema',
-  // testImage: 'imageSchema',
-  // testImages: '[imageSchema]',
-  // testSocials: 'Socials',
-  // testMultilingualTextarea: 'multilingualSchema-Textarea',
-  // testMultilingualEditor: 'multilingualSchema-quill-editor',
-  // testEditor: 'quill-editor',
-  // testTextarea: 'Textarea',
-  // testSlideToggle: 'Slide-toggle',
-  // meta: 'Meta',
-  // testReference: 'Reference',
-  // testSelect: 'Select',
-  // about: {
-  //   phone: 'String',
-  //   address: 'multilingualSchema',
-  // }
-}
+  Image: 'imageSchema',
+  tags: ['String']
+*/
+
+/*
+// stories
+
+  title: 'multilingualSchema',
+  description: 'multilingualSchema',
+  Image: 'imageSchema',
+
+*/
+
 
 /* blog 
 

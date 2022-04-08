@@ -28,11 +28,12 @@ function parseId({ _id }: { _id?: any }) {
 function parseSearch({ keyword }: { keyword?: string }) {
   return keyword ? {
     or: [
-      { 'name.en': { $regex: keyword, $options: 'i' } },
-      { 'name.ge': { $regex: keyword, $options: 'i' } },
-      { 'name.ru': { $regex: keyword, $options: 'i' } },
-      { 'status': { $regex: keyword, $options: 'i' } },
-      
+      { 'title.en': { $regex: keyword, $options: 'i' } },
+      { 'title.ge': { $regex: keyword, $options: 'i' } },
+      { 'title.ru': { $regex: keyword, $options: 'i' } },
+      { 'description.en': { $regex: keyword, $options: 'i' } },
+      { 'description.ge': { $regex: keyword, $options: 'i' } },
+      { 'description.ru': { $regex: keyword, $options: 'i' } },
     ],
   } : {};
 }
@@ -59,13 +60,8 @@ export function parseUpdatePositions(req: Request, res: Response, next: NextFunc
 
 function parseBaseProps(body: any) {
   return _.pick(body, [
-    'id',
-    'name',
-    'views',
-    'sort',
-    'updateDate',
-    'createDate',
-    'status',
-    
+    'title',
+    'description',
+    'Image',
   ]);
 }

@@ -5,11 +5,15 @@ import * as _ from 'lodash';
 
 import * as UserDao from '../api/users/user.dao';
 import * as MetaDao from '../api/metas/meta.dao';
-import * as EventDao from '../api/events/event.dao';
+import * as StoryDao from '../api/stories/stories.dao';
+import * as RequestedWalkerDao from '../api/requested-walkers/requested-walkers.dao';
+import * as FaqDao from '../api/faqs/faqs.dao';
 
 import * as UserStub from '../stubs/user.stub';
 import * as MetaStub from '../stubs/meta.stub';
-import * as EventStub from '../stubs/event.stub';
+import * as StoryStub from '../stubs/stories.stub';
+import * as RequestedWalkerStub from '../stubs/requested-walkers.stub';
+import * as FaqStub from '../stubs/faqs.stub';
 
 
 export async function seedDB() {
@@ -28,7 +32,9 @@ export async function seedDB() {
 export async function seedDBDevelopment() {
   await UserDao.insertMany(getAdmin());
   await MetaDao.create(MetaStub.getSingle());
-  await EventDao.insertMany(EventStub.getMany(11));
+  await StoryDao.insertMany(StoryStub.getMany(11));
+  await RequestedWalkerDao.insertMany(RequestedWalkerStub.getMany(11));
+  await FaqDao.insertMany(FaqStub.getMany(11));
 
 
   logger.info('Seed DB development completed');
@@ -37,7 +43,10 @@ export async function seedDBDevelopment() {
 export async function seedDBProduction() {
   await UserDao.insertMany(getAdmin());
   await MetaDao.create(MetaStub.getSingle());
-  await EventDao.insertMany(EventStub.getMany(11));
+  await StoryDao.insertMany(StoryStub.getMany(11));
+  await RequestedWalkerDao.insertMany(RequestedWalkerStub.getMany(11));
+  await FaqDao.insertMany(FaqStub.getMany(11));
+
 
   logger.info('Seed DB production completed');
 }
@@ -45,13 +54,17 @@ export async function seedDBProduction() {
 export async function clearDBDevelopment() {
   await UserDao.destroyAll();
   await MetaDao.destroyAll();
-  await EventDao.destroyAll();
+  await StoryDao.destroyAll();
+  await RequestedWalkerDao.destroyAll();
+  await FaqDao.destroyAll();
 }
 
 export async function clearDBProduction() {
   await UserDao.destroyAll();
   await MetaDao.destroyAll();
-  await EventDao.destroyAll();
+  await StoryDao.destroyAll();
+  await RequestedWalkerDao.destroyAll();
+  await FaqDao.destroyAll();
 }
 
 function getAdmin() {

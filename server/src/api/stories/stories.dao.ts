@@ -1,4 +1,4 @@
-import Model from './blog-categories.model';
+import Model from './stories.model';
 import Promise from 'bluebird';
 import { assertFound } from '../../helpers/db-result-handler';
 
@@ -13,7 +13,7 @@ export function getByQuery({find = {}, populate = '', or = [{}], sort = { positi
 
 export function getById(id: any): any {
   return Model.findOne({_id: id}).lean()
-    .then(assertFound(`BlogCategories (id ${id}) was not found`));
+    .then(assertFound(`Stories (id ${id}) was not found`));
 }
 
 // =============== Setters ===============
@@ -28,12 +28,12 @@ export function insertMany(data: any) {
 
 export function update(id: any, data: any) {
   return Model.findOneAndUpdate({_id: id}, {$set: data})
-    .then(assertFound(`Could not update BlogCategories (id ${id})`));
+    .then(assertFound(`Could not update Stories (id ${id})`));
 }
 
 export function destroy(id: any) {
   return Model.findOneAndRemove({_id: id})
-    .then(assertFound(`Could not destroy BlogCategories (id ${id})`));
+    .then(assertFound(`Could not destroy Stories (id ${id})`));
 }
 
 export function destroyAll() {

@@ -34,8 +34,6 @@ function parseSearch({ keyword }: { keyword?: string }) {
       { 'description.en': { $regex: keyword, $options: 'i' } },
       { 'description.ge': { $regex: keyword, $options: 'i' } },
       { 'description.ru': { $regex: keyword, $options: 'i' } },
-      { 'status': { $regex: keyword, $options: 'i' } },
-      
     ],
   } : {};
 }
@@ -62,19 +60,9 @@ export function parseUpdatePositions(req: Request, res: Response, next: NextFunc
 
 function parseBaseProps(body: any) {
   return _.pick(body, [
-    'id',
-    'category',
     'name',
     'description',
-    'fbImage',
-    'thumbnail',
-    'views',
-    'liked',
-    'readTime',
-    'updateDate',
-    'createDate',
-    'status',
-    'meta',
-    
+    'Image',
+    'tags',
   ]);
 }

@@ -17,8 +17,7 @@ export function parseUpdate(req: Request, res: Response, next: NextFunction) {
 
 function parseCommon(body: any) {
   return _.pick(body, [
-    'header',
-    'home',
-    'userAccount',
+    'promo',
+    'contacts',
   ]);
 }
