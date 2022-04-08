@@ -20,13 +20,13 @@
 // note: object key titles must be camelCase
 
 // available langs
-export const availableLangs = ['en', 'ge'. 'ru' ];
+export const availableLangs = ['en', 'ge', 'ru' ];
 
 // list display fields
 // only String or multilingualSchema
 export const listFields = {
-  testString: 'String',
-  // title: 'multilingualSchema', 
+  // testString: 'String',
+  title: 'multilingualSchema', 
 };
 
 export const refFields = {
@@ -49,23 +49,27 @@ export const selectFields = {
 }
 
 export const fields = {
-  testString: 'String',
-  testNumber: 'Number',
-  testDate: 'Date',
-  testMultilingual: 'multilingualSchema',
-  testImage: 'imageSchema',
-  testImages: '[imageSchema]',
-  testSocials: 'Socials',
-  testMultilingualTextarea: 'multilingualSchema-Textarea',
-  testMultilingualEditor: 'multilingualSchema-quill-editor',
-  testEditor: 'quill-editor',
-  testTextarea: 'Textarea',
-  testSlideToggle: 'Slide-toggle',
-  meta: 'Meta',
-  testReference: 'Reference',
-  testSelect: 'Select',
-  about: {
-    phone: 'String',
-    address: 'multilingualSchema',
-  }
+  title: 'multilingualSchema',
+  description: 'multilingualSchema',
+  Image: 'imageSchema',
 }
+
+
+
+/*
+// requested walkers
+  name: 'multilingualSchema',
+  description: 'multilingualSchema',
+  Image: 'imageSchema',
+  tags: ['String']
+*/
+
+/*
+// stories
+
+  title: 'multilingualSchema',
+  description: 'multilingualSchema',
+  Image: 'imageSchema',
+
+*/
+

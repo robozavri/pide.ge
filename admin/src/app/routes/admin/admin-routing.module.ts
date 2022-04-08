@@ -16,6 +16,10 @@ const routes: Routes = [
     canActivate: [AdminGuardService],
     children: [
       {
+        path: 'stories',
+        loadChildren: './routes/stories/stories.module#StoriesModule'
+      },
+      {
         path: 'meta',
         loadChildren: './routes/meta/meta.module#MetaModule'
       },

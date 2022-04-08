@@ -8,9 +8,15 @@ export const navigation: FuseNavigation[] = [
     type: 'group',
     children: [
       {
+        id: 'stories',
+        title: 'Stories',
+        type: 'item',
+        icon: 'all_out',
+        url: '/admin/stories',
+      },
+      {
         id: 'meta',
         title: 'Meta',
-        translate: 'NAV.META',
         type: 'item',
         icon: 'all_out',
         url: '/admin/meta',

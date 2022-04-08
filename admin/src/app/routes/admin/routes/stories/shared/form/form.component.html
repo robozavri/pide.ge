@@ -1,0 +1,55 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="tab-content pt-24 pb-24" fusePerfectScrollbar fxLayout="column">
+    
+    <div fxLayout="row" fxLayoutAlign="space-between" formGroupName='title'>
+      
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> title en </mat-label>
+          <input matInput placeholder="title en" formControlName="en">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> title ge </mat-label>
+          <input matInput placeholder="title ge" formControlName="ge">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> title ru </mat-label>
+          <input matInput placeholder="title ru" formControlName="ru">
+      </mat-form-field>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between" formGroupName='description'>
+      
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description en </mat-label>
+          <input matInput placeholder="description en" formControlName="en">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description ge </mat-label>
+          <input matInput placeholder="description ge" formControlName="ge">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description ru </mat-label>
+          <input matInput placeholder="description ru" formControlName="ru">
+      </mat-form-field>
+
+    </div>
+
+    <h3> image </h3>
+    <div class="inputs_container">
+      <app-image-upload
+        [image]="formData.Image"
+        [imageHeight]="imageSize.height"
+        [imageWidth]="imageSize.width"
+        (uploadComplete)="onUploadCompleteImage6($event)">
+      </app-image-upload>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" *ngIf="showSubmit"> Submit </button>
+    </div>
+  </div>
+</form>

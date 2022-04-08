@@ -55,8 +55,8 @@ import { MapLocationComponent } from './components/map-location/map-location.com
 import { MetaFormComponent } from './components/meta-form/meta-form.component';
 import { ConfirmDeleteModalComponent } from './modals/confirm-delete/confirm-delete-modal.component';
 import { QuillModule } from 'ngx-quill';
-import { CalendarApiService } from './http/calendar-api.service';
 import { SnackBarService } from './services/snack-bar.service';
+import { StoryApiService } from './http/story-api.service';
 import { ImagesUploadComponent } from './components/images-upload/images-upload.component';
 
 
@@ -168,7 +168,7 @@ import { ImagesUploadComponent } from './components/images-upload/images-upload.
   entryComponents: [],
 })
 export class SharedModule {
-  static forRoot() {
+  static forRoot(): any {
     return {
       ngModule: SharedModule,
       providers: [
@@ -180,8 +180,8 @@ export class SharedModule {
         AuthService,
         FileApiService,
         MetaApiService,
-        CalendarApiService,
         SnackBarService,
+        StoryApiService,
       ]
     };
   }
