@@ -10,6 +10,7 @@
     margin-bottom: 62px;
     h1 {
         word-wrap: break-word;
+        font-family: "contractica-black";
     }
 }
 
@@ -17,6 +18,7 @@
     margin-top: 62px;
     margin-left: 16px;
     margin-right: 16px;
+    font-family: "contractica-regular";
 }
 
 .booking-btn {
@@ -27,11 +29,12 @@
     height: 64px;
     font-size: 20px;
     font-weight: bold;
-    padding: 0px 27px 0px 27px;
+    padding: 8px 27px 0px 27px;
     background-color: $green;
     border-color: $green;
     color: #FFFF;
     border-radius: 50px;
+    font-family: "contractica-caps-black";
  }
 
  .banner-wraper {

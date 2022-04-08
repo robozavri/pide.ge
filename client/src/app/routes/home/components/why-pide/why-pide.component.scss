@@ -4,6 +4,7 @@
     margin-top: 73px;
     margin-left: 16px;
     margin-right: 16px;
+    font-family: "contractica-caps-black";
 }
 .section-container {
     display: flex;
@@ -28,11 +29,13 @@
         .card-tem-title {
             margin-top: 20px;
             font-size: 20px;
+            font-family: 'contractica-bold';
         }
         .card-tem-description {
             margin-top: 16px;
             font-size: 16px;
             overflow: hidden;
+            font-family: 'contractica-regular';
         }
     }
 }

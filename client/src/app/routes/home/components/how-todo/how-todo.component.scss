@@ -4,6 +4,7 @@
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 47px;
+    font-family: "contractica-caps-black";
 }
 
 .section-container {
@@ -37,6 +38,10 @@
             margin-left: 25px;
             .step-title {
                 font-weight: bold;
+                font-family: "contractica-bold";
+            }
+            .step-text {
+                font-family: "contractica-regular";
             }
         }
     }

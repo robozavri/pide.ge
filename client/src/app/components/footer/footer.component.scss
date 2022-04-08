@@ -10,6 +10,7 @@
     .list-title {
         font-size: 20px;
         font-weight: bold;
+        font-family: "contractica-bold";
     }
 }
 
@@ -24,6 +25,8 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: 14%;
+    font-family: "contractica-regular";
+
     div {
         margin-top: 10px;
         cursor: pointer;

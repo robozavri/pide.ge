@@ -11,12 +11,14 @@
     margin-bottom: 62px;
     h1 {
         word-wrap: break-word;
+        font-family: "contractica-black";
     }
 }
 
 .sub-title {
     text-align: center;
     font-size: 16px;
+    font-family: "contractica-regular";
 }
 
 .section-container {
@@ -49,6 +51,7 @@
         }
         .content {
             margin-top: 16px;
+            font-family: "contractica-regular";
         }
     }
 }

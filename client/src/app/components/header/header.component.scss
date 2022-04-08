@@ -17,6 +17,7 @@
 			li {
 				margin-bottom: 24px;
 				font-size: 16px;
+				font-family: 'contractica-regular';
 			}
 		}
 	}
@@ -94,11 +95,12 @@
 			height: 48px;
 			font-size: 16px;
 			font-weight: bold;
-			padding: 0px 27px 0px 27px;
+			padding: 5px 27px 0px 27px;
 			background-color: $green;
 			border-color: $green;
 			color: #FFFF;
 			border-radius: 50px;
+			font-family: 'contractica-caps-black';
 		 }
 	 }	
  } 
@@ -121,11 +123,11 @@
 	display: flex;
 	margin-left: 40px;
 	margin-bottom: 0px;
-
+	
 	li {
 		cursor: pointer;
-		font-family: 'TBCContractica';
-		font-size: 16;
+		font-family: 'contractica-regular';
+		font-size: 16px;
 	}
 	li:hover {
 		background: none;

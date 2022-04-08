@@ -14,7 +14,7 @@
 		.header-text {
 			width: 411px;
 			height: 256px;
-			font-family: 'TBCContractica-Bold';
+			font-family: "contractica-black";
 			font-size: 42px;
     		font-weight: bold;
 
@@ -29,16 +29,17 @@
 			height: 65px;
 			font-size: 20px;
 			font-weight: bold;
-			padding: 0px 50px 7px 50px;
+			padding: 14px 50px 7px 50px;
 			background-color: $green;
 			border-color: $green;
 			color: #FFFF;
 			border-radius: 50px;
+			font-family: 'contractica-caps-black';
 		}
 	}
 }
   
-@media screen and (min-width: 400px) and (max-width: 599px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
 
 	.header-text-wraper {
 		display: flex;

@@ -4,6 +4,7 @@
     margin-top: 73px;
     margin-left: 16px;
     margin-right: 16px;
+    font-family: "contractica-caps-black";
 }
 .section-container {
     display: flex;
@@ -32,6 +33,7 @@
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
+            font-family: "contractica-black";
         }
         .tags  {
             margin-top: 18px;
@@ -41,16 +43,18 @@
             background-color: #E7E7EB;
             padding-left: 11px;
             padding-right: 11px;
-            padding-top: 9px;
-            padding-bottom: 9px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             margin-right: 8px;
             margin-top: 8px;
             border-radius: 8px;
             font-size: 12px;
+            font-family: 'contractica-regular';
         }
         .card-tem-description {
             margin-top: 20px;
             font-size: 16px;
+            font-family: 'contractica-regular';
         }
     }
 }

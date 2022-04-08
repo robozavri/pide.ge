@@ -13,6 +13,7 @@
     margin-bottom: 62px;
     h1 {
         word-wrap: break-word;
+        font-family: "contractica-black";
     }
 }
 
@@ -66,6 +67,7 @@
             }
             .faq-title {
                 margin-left: 27px;
+                font-family: "contractica-Medium";
             }
         }
         .faq-content {
@@ -78,6 +80,7 @@
             padding-left: 72px;
             padding-right: 26px;
             padding-bottom: 26px;
+            font-family: "contractica-regular";
         }       
     }
 }
@@ -90,11 +93,12 @@
     height: 64px;
     font-size: 20px;
     font-weight: bold;
-    padding: 0px 27px 0px 27px;
+    padding: 7px 27px 0px 27px;
     background-color: $green;
     border-color: $green;
     color: #FFFF;
     border-radius: 50px;
+    font-family: "contractica-caps-black";
  }
 
  .banner-wraper {

@@ -3,6 +3,7 @@
     font-size: 25px;
     margin-left: 16px;
     margin-right: 16px;
+    font-family: "contractica-caps-black";
 }
 
 .section-container {
@@ -35,7 +36,7 @@
             .username {
                 margin-left: 25px;
                 padding-top: 22px;
-                font-weight: bold;
+                font-family: "contractica-caps-black";
             }
             .card-header-quote {
                 width: 48px;
@@ -48,11 +49,13 @@
         .card-tem-title {
             margin-top: 20px;
             font-size: 20px;
+            font-family: "contractica-caps-black";
         }
         .card-tem-description {
             margin-top: 16px;
             font-size: 16px;
             overflow: hidden;
+            font-family: "contractica-regular";
         }
     }
 }
