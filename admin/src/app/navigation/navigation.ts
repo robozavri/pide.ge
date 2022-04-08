@@ -8,6 +8,13 @@ export const navigation: FuseNavigation[] = [
     type: 'group',
     children: [
       {
+        id: 'policy',
+        title: 'Policy',
+        type: 'item',
+        icon: 'info',
+        url: '/admin/policy',
+      },
+      {
         id: 'about-us',
         title: 'About Us',
         type: 'item',

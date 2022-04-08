@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss'],
+  selector: 'app-policy',
+  templateUrl: './policy.component.html',
+  styleUrls: ['./policy.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AboutUsComponent implements OnInit {
+export class PolicyComponent implements OnInit {
   form: FormGroup;
   formData: any = {};
 
@@ -22,7 +22,7 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     this.loadData();
     this.api.getOne().subscribe((data: any) => {
-      this.formData = data.aboutUs;
+      this.formData = data.policy;
       this.loadData();
     });
   }
@@ -40,7 +40,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   submit(): void {
-    this.api.update({ aboutUs: {...this.form.value}}).subscribe(
+    this.api.update({ policy: {...this.form.value}}).subscribe(
       () => this.snackBarService.open('Updated Successfully'),
       () => this.snackBarService.open('Update Failed'),
     );
