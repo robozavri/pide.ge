@@ -16,6 +16,10 @@ const routes: Routes = [
     canActivate: [AdminGuardService],
     children: [
       {
+        path: 'contact',
+        loadChildren: './routes/contact/contact.module#ContactModule'
+      },
+      {
         path: 'privacy',
         loadChildren: './routes/privacy/privacy.module#PrivacyModule'
       },

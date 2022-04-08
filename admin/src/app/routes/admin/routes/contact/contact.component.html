@@ -1,0 +1,39 @@
+<div class="page-layout carded fullwidth inner-scroll">
+  <div class="top-bg accent"></div>
+  <div class="center">
+    <div class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <div class="logo mb-24 mb-md-0" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="logo-icon s-32 mr-16">contact_phone </mat-icon>
+            <span class="logo-text h1"> Contacts </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <div class="content">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+            
+            <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+              <mat-label> email </mat-label>
+              <input matInput placeholder="email" formControlName="email">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+                <mat-label> phone </mat-label>
+                <input matInput placeholder="phone" formControlName="phone">
+            </mat-form-field>
+        
+
+            <div class=" mt-24">
+              <button mat-raised-button color="primary"> Submit </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

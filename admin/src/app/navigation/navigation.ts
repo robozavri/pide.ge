@@ -8,6 +8,13 @@ export const navigation: FuseNavigation[] = [
     type: 'group',
     children: [
       {
+        id: 'contact',
+        title: 'Contact',
+        type: 'item',
+        icon: 'contact_phone',
+        url: '/admin/contact',
+      },
+      {
         id: 'privacy',
         title: 'Privacy',
         type: 'item',
