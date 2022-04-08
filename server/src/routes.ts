@@ -9,6 +9,7 @@ import { AppError } from './errors';
 
 import fileRouter from './api/files';
 import userRouter from './api/users';
+import commonRouter from './api/commons';
 import metaRouter from './api/metas';
 import storiesRouter from './api/stories';
 import requestedWalkersRouter from './api/requested-walkers';
@@ -31,6 +32,7 @@ export function initRoutes(app: Express) {
 
   app.use('/api/users', userRouter);
   app.use('/api/files', fileRouter);
+  app.use('/api/commons', commonRouter);
   app.use('/api/metas', metaRouter);
   app.use('/api/stories', storiesRouter);
   app.use('/api/requested-walkers', requestedWalkersRouter);
