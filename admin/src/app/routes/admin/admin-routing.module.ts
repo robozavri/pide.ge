@@ -6,7 +6,7 @@ import { AdminGuardService } from './admin-guard.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'info',
+    redirectTo: 'faqs',
     pathMatch: 'full',
     canActivate: [AdminGuardService],
   },
@@ -15,6 +15,10 @@ const routes: Routes = [
     component: AdminComponent,
     canActivate: [AdminGuardService],
     children: [
+      {
+        path: 'about-us',
+        loadChildren: './routes/about-us/about-us.module#AboutUsModule'
+      },
       {
         path: 'walkers',
         loadChildren: './routes/requested-walkers/requested-walkers.module#RequestedWalkersModule'

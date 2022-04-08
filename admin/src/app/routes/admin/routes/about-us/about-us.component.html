@@ -1,0 +1,40 @@
+<div class="page-layout carded fullwidth inner-scroll">
+  <div class="top-bg accent"></div>
+  <div class="center">
+    <div class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <div class="logo mb-24 mb-md-0" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="logo-icon s-32 mr-16"> about us </mat-icon>
+            <span class="logo-text h1"> info </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <div class="content">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+            
+            <div formGroupName="content">
+              <label class="formLabel">content ge </label>
+              <quill-editor formControlName="ge"></quill-editor>
+
+              <label class="formLabel">content en </label>
+              <quill-editor formControlName="en"></quill-editor>
+
+              <label class="formLabel">content ru </label>
+              <quill-editor formControlName="ru"></quill-editor>
+            </div>
+        
+
+            <div class=" mt-24">
+              <button mat-raised-button color="primary"> Submit </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
