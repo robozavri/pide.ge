@@ -16,6 +16,14 @@ const routes: Routes = [
     canActivate: [AdminGuardService],
     children: [
       {
+        path: 'walkers',
+        loadChildren: './routes/requested-walkers/requested-walkers.module#RequestedWalkersModule'
+      },
+      {
+        path: 'walker/:id',
+        loadChildren: './routes/requested-walker/requested-walker.module#RequestedWalkerModule'
+      },
+      {
         path: 'stories',
         loadChildren: './routes/stories/stories.module#StoriesModule'
       },

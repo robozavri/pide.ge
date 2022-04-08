@@ -1,0 +1,87 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+    
+    <div fxLayout="row" fxLayoutAlign="space-between" formGroupName='name'>
+      
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> name en </mat-label>
+          <input matInput placeholder="name en" formControlName="en">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> name ge </mat-label>
+          <input matInput placeholder="name ge" formControlName="ge">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> name ru </mat-label>
+          <input matInput placeholder="name ru" formControlName="ru">
+      </mat-form-field>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between" formGroupName='description'>
+      
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description en </mat-label>
+          <input matInput placeholder="description en" formControlName="en">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description ge </mat-label>
+          <input matInput placeholder="description ge" formControlName="ge">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+          <mat-label> description ru </mat-label>
+          <input matInput placeholder="description ru" formControlName="ru">
+      </mat-form-field>
+
+    </div>
+
+    <h3> Image </h3>
+    <div class="inputs_container">
+      <app-image-upload
+        [image]="formData.Image"
+        [imageHeight]="imageSize.height"
+        [imageWidth]="imageSize.width"
+        (uploadComplete)="onUploadCompleteImage3($event)">
+      </app-image-upload>
+    </div>
+  
+    <h2>Tags</h2>
+    <div formArrayName="tags">
+      <mat-card *ngFor="let item of tags.controls; let i = index;" style="margin-bottom: 20px;">
+        <h2>Tag {{i + 1}}</h2>
+        <div [formGroupName]="i" style="margin: 20px">
+          <div fxLayout="column" fxLayoutAlign="">
+
+            <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+              <mat-label> en </mat-label>
+              <input matInput placeholder="en" formControlName="en">
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+              <mat-label> ge </mat-label>
+              <input matInput placeholder="ge" formControlName="ge">
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline" floatLabel="always" fxFlex="30">
+              <mat-label> ru </mat-label>
+              <input matInput placeholder="ru" formControlName="ru">
+          </mat-form-field>
+
+          </div>
+          <button type="button" mat-raised-button color="warn" (click)="deleteTag(i)">
+              <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card>
+      <button type="button" mat-raised-button color="accent" (click)="addTag()"
+        style="margin-bottom: 30px;">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+  </div>
+</form>

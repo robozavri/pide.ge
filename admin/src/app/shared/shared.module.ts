@@ -58,6 +58,7 @@ import { QuillModule } from 'ngx-quill';
 import { SnackBarService } from './services/snack-bar.service';
 import { StoryApiService } from './http/story-api.service';
 import { ImagesUploadComponent } from './components/images-upload/images-upload.component';
+import { RequestedWalkerApiService } from './http/requested-walker-api.service';
 
 
 @NgModule({
@@ -182,6 +183,7 @@ export class SharedModule {
         MetaApiService,
         SnackBarService,
         StoryApiService,
+        RequestedWalkerApiService,
       ]
     };
   }

@@ -26,7 +26,8 @@ export const availableLangs = ['en', 'ge', 'ru' ];
 // only String or multilingualSchema
 export const listFields = {
   // testString: 'String',
-  title: 'multilingualSchema', 
+  name: 'multilingualSchema', 
+  // title: 'multilingualSchema', 
 };
 
 export const refFields = {
@@ -49,9 +50,10 @@ export const selectFields = {
 }
 
 export const fields = {
-  title: 'multilingualSchema',
+  name: 'multilingualSchema',
   description: 'multilingualSchema',
   Image: 'imageSchema',
+  tags: 'Socials'
 }
 
 
