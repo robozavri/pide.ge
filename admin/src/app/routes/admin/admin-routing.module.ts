@@ -16,6 +16,10 @@ const routes: Routes = [
     canActivate: [AdminGuardService],
     children: [
       {
+        path: 'promo',
+        loadChildren: './routes/promo/promo.module#PromoModule'
+      },
+      {
         path: 'contact',
         loadChildren: './routes/contact/contact.module#ContactModule'
       },
@@ -30,6 +34,10 @@ const routes: Routes = [
       {
         path: 'about-us',
         loadChildren: './routes/about-us/about-us.module#AboutUsModule'
+      },
+      {
+        path: 'faq-page',
+        loadChildren: './routes/faq-page/faq-page.module#FaqPageModule'
       },
       {
         path: 'walkers',

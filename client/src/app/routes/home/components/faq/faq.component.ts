@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Faq } from 'src/app/shared/models/faq';
 
 @Component({
   selector: 'app-faq',
@@ -7,19 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  activeFaq = 0;
+  activeFaq: string;
+  firstHalf: Faq[] = [];
+  hsecondHlf: Faq[] = [];
+  @Input() faqs: Faq[];
 
   constructor() { }
 
   ngOnInit(): void {
+    const faqs = this.faqs;
+    const half = Math.ceil(this.faqs.length / 2);
+    this.firstHalf = [ ...faqs.slice(0, half)];
+    this.hsecondHlf = [...faqs.slice(half)];
   }
 
-  setActiveFaq(index: number) {
-    console.log(index)
-    if (this.activeFaq === index) {
-      this.activeFaq = 99999;
+  setActiveFaq(_id: string) {
+    if (this.activeFaq === _id) {
+      this.activeFaq = '';
+      return;
     }
-    this.activeFaq = index;
+    this.activeFaq = _id;
   }
 
 }

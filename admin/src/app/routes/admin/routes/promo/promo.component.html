@@ -1,0 +1,50 @@
+<div class="page-layout carded fullwidth inner-scroll">
+  <div class="top-bg accent"></div>
+  <div class="center">
+    <div class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <div class="logo mb-24 mb-md-0" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="logo-icon s-32 mr-16"> computer </mat-icon>
+            <span class="logo-text h1"> Promo </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <div class="content">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+            
+            <h3> Image </h3>
+            <div class="inputs_container">
+              <app-image-upload
+                [image]="formData.image"
+                [imageHeight]="imageSize.height"
+                [imageWidth]="imageSize.width"
+                (uploadComplete)="onUploadCompleteImage($event)">
+              </app-image-upload>
+            </div>
+
+            <div formGroupName="title">
+              <label class="formLabel">title ge </label>
+              <quill-editor formControlName="ge"></quill-editor>
+
+              <label class="formLabel">title en </label>
+              <quill-editor formControlName="en"></quill-editor>
+
+              <label class="formLabel">title ru </label>
+              <quill-editor formControlName="ru"></quill-editor>
+            </div>
+        
+
+            <div class=" mt-24">
+              <button mat-raised-button color="primary"> Submit </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

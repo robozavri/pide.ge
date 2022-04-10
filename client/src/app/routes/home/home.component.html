@@ -1,10 +1,10 @@
 <app-header></app-header>
 <div class="home">
-    <app-promo></app-promo>
+    <app-promo *ngIf="common && common.promo" [promo]="common.promo"></app-promo>
     <app-why-pide></app-why-pide>
-    <app-friend-stories></app-friend-stories>
-    <app-requested-walkers></app-requested-walkers>
+    <app-friend-stories *ngIf="stories && stories.length > 0" [stories]="stories"></app-friend-stories>
+    <app-requested-walkers *ngIf="walkers && walkers.length > 0" [walkers]="walkers"></app-requested-walkers>
     <app-how-todo></app-how-todo>
-    <app-faq></app-faq>
+    <app-faq *ngIf="faqs && faqs.length > 0" [faqs]="faqs"></app-faq>
 </div>  
 <app-footer></app-footer>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Story } from 'src/app/shared/models/story';
 
 @Component({
   selector: 'app-friend-stories',
@@ -7,6 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./friend-stories.component.scss']
 })
 export class FriendStoriesComponent implements OnInit {
+
+  @Input() stories: Story[];
 
   storiesCarouselOptions: OwlOptions;
   customOptions: OwlOptions = {

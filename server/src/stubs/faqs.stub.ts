@@ -6,7 +6,7 @@ import { cloneStub } from '../helpers/stub-helpers';
 function getQuestionObject(i: number = 0): any {
   return {
     en: `question en ${i}`,
-    ge: `question ge ${i}`,
+    ge: ` რა არის პაიდი? ${i}`,
     ru: `question ru ${i}`,
   };
 }
@@ -14,7 +14,7 @@ function getQuestionObject(i: number = 0): any {
 function getAnswerObject(i: number = 0): any {
   return {
     en: `answer en ${i}`,
-    ge: `answer ge ${i}`,
+    ge: `At Rover we know that every dog, cat, and pet parent is unique. Our marketplace of pet sitters and dog walkers the largest in the world—is designed to help you find your perfect match. You’ll find a variety of sitters and dog walkers. ${i}`,
     ru: `answer ru ${i}`,
   };
 }

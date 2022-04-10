@@ -74,28 +74,33 @@
     }
 }
 
-
-
-
-
 @media screen and (min-width: 1200px) {
-    // .card-tem {
-    //     width: 31%;
-    // }
     .left-column {
         width: 49%;    
     }
     .right-column {
         width: 49%;    
     }
+    .booking-btn {  
+        margin-top: 100px;
+        margin-left: 65%;
+        position: relative;
+        width: 135px;
+        height: 48px;
+        font-size: 16px;
+     }
     
 }
 @media screen and (min-width: 993px) and (max-width: 1199px) {
-    .section-container {
-        // .card-tem {
-        //     width: 47%;
-        // }
-    }
+    .booking-btn {
+  
+        margin-top: 100px;
+        margin-left: 56%;
+        position: relative;
+        width: 135px;
+        height: 48px;
+        font-size: 16px;
+     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -108,6 +113,14 @@
             width: 100%;    
         }
     }
+    .booking-btn {  
+        margin-top: 100px;
+        margin-left: 55%;
+        position: relative;
+        width: 135px;
+        height: 48px;
+        font-size: 16px;
+     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
@@ -120,6 +133,15 @@
             width: 100%;    
         }
     }
+    .booking-btn {
+  
+        margin-top: 100px;
+        margin-left: 54%;
+        position: relative;
+        width: 135px;
+        height: 48px;
+        font-size: 16px;
+     }
 }
 @media screen and (min-width: 200px) and (max-width: 499px) {
     .section-container {

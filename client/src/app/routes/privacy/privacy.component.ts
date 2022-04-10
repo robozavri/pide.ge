@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonApiService } from 'src/app/shared/http/common-api.service';
+import { Common } from 'src/app/shared/models/common';
 
 @Component({
   selector: 'app-privacy',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyComponent implements OnInit {
 
-  constructor() { }
+  privacy: Common['privacy'];
+
+  constructor(
+    private commonApiService: CommonApiService,
+  ) { }
 
   ngOnInit(): void {
+    this.commonApiService.getOne().subscribe((data) => {
+      this.privacy = data.privacy;
+    });
   }
 
 }

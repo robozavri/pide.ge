@@ -5,8 +5,8 @@ import { cloneStub, generateImage } from '../helpers/stub-helpers';
 
 function getTitleObject(i: number = 0): any {
   return {
-    en: `title en ${i}`,
-    ge: `title ge ${i}`,
+    en: ` title en ${i}`,
+    ge: `ელეონორა ტ. ${i}`,
     ru: `title ru ${i}`,
   };
 }
@@ -14,7 +14,7 @@ function getTitleObject(i: number = 0): any {
 function getDescriptionObject(i: number = 0): any {
   return {
     en: `description en ${i}`,
-    ge: `description ge ${i}`,
+    ge: `უბრალოდ მინდა მადლობა გადაგიხადოთ თქვენ და მარიამს ❤️ მაქსი ისე ასეირნა ჩვენ არც გავხსენებივართ ამას 😂 ორი ღამე არ მეძინა ნერვიულობით და ჯერ მარიამს რომ შევხვდი მაშინ დავმშვიდდი, მერე მაქსი რომ უპრობლემოდ გაყვა ❤️ მოკლედ, მადლობა დიდი და ვიცი ვის მივმართო როცა დამჭირდება ${i}`,
     ru: `description ru ${i}`,
   };
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RequestedWalker } from 'src/app/shared/models/requested-walker';
 
 @Component({
   selector: 'app-requested-walkers',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./requested-walkers.component.scss']
 })
 export class RequestedWalkersComponent implements OnInit {
+
+  @Input() walkers: RequestedWalker[];
 
   constructor() { }
 

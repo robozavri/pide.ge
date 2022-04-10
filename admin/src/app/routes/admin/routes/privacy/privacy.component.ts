@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
+import { largeSize } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-privacy',
@@ -12,6 +13,7 @@ import { CommonApiService } from 'app/shared/http/common-api.service';
 export class PrivacyComponent implements OnInit {
   form: FormGroup;
   formData: any = {};
+  imageSize = largeSize;
 
   constructor(
     private fb: FormBuilder,
@@ -30,15 +32,25 @@ export class PrivacyComponent implements OnInit {
   loadData(): any {
  
     this.formData.content = this.formData.content || {};
+    this.formData.banner = this.formData.banner || {};
+
     this.form = this.fb.group({
       content:  this.fb.group({
         ge: [this.formData.content.ge || ''],
         en: [this.formData.content.en || ''],
         ru: [this.formData.content.ru || ''],
-      })
+      }),
+      banner: this.fb.group({
+        url: [this.formData.banner.url || '']
+      }),
     });
   }
 
+  onUploadCompleteImage3(data: any): void {
+    this.form.get('banner').get('url').markAsTouched();
+    this.form.get('banner').get('url').setValue(data.url);
+  }
+  
   submit(): void {
     this.api.update({ privacy: {...this.form.value}}).subscribe(
       () => this.snackBarService.open('Updated Successfully'),

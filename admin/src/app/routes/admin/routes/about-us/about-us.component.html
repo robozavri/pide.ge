@@ -17,6 +17,16 @@
         <form [formGroup]="form" (ngSubmit)="submit()">
           <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
             
+            <h3> Banner </h3>
+            <div class="inputs_container">
+              <app-image-upload
+                [image]="formData.banner"
+                [imageHeight]="imageSize.height"
+                [imageWidth]="imageSize.width"
+                (uploadComplete)="onUploadCompleteImage3($event)">
+              </app-image-upload>
+            </div>
+
             <div formGroupName="content">
               <label class="formLabel">content ge </label>
               <quill-editor formControlName="ge"></quill-editor>

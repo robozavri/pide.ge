@@ -14,12 +14,18 @@ const promoSchema = {
 
 const aboutUsSchema = {
     content: multilingualSchema,
+    banner: imageSchema,
 };
 const policySchema = {
     content: multilingualSchema,
+    banner: imageSchema,
 };
 const privacySchema = {
     content: multilingualSchema,
+    banner: imageSchema,
+};
+const faqsSchema = {
+    banner: imageSchema,
 };
 
 const CommonSchema = new Schema({
@@ -28,6 +34,7 @@ const CommonSchema = new Schema({
     aboutUs: aboutUsSchema,
     policy: policySchema,
     privacy: privacySchema,
+    faqs: faqsSchema,
 });
 
 export default model('Common', CommonSchema);

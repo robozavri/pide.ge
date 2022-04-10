@@ -5,4 +5,5 @@ export interface Common {
   policy?: any;
   privacy?: any;
   aboutUs?: any;
+  faqs?: any;
 } 

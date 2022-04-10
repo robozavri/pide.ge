@@ -6,7 +6,7 @@ import { cloneStub, generateImage } from '../helpers/stub-helpers';
 function getNameObject(i: number = 0): any {
   return {
     en: `name en ${i}`,
-    ge: `name ge ${i}`,
+    ge: `თინა კ. ${i}`,
     ru: `name ru ${i}`,
   };
 }
@@ -14,7 +14,7 @@ function getNameObject(i: number = 0): any {
 function getDescriptionObject(i: number = 0): any {
   return {
     en: `description en ${i}`,
-    ge: `description ge ${i}`,
+    ge: `👋 მე მქვია ანა. ვარ 19 წლის. სამხატვრო აკადემიის სტუდენტი, მე-2 კურსზე. გამიმართლა და ბავშვობიდანვე სახლში გვყავდა ბევრი ძაღლი. ბობი ჩ... ${i}`,
     ru: `description ru ${i}`,
   };
 }
@@ -26,15 +26,15 @@ function getImageObject(i: number = 0): any {
 function getTagsObject(i: number = 0): any {
     return [{
       en: `tag en ${i}`,
-      ge: `tag ge ${i}`,
+      ge: `100+ ჯავშანი ${i}`,
       ru: `tag ru ${i}`,
     }, {
       en: `tag en ${i} 2`,
-      ge: `tag ge ${i} 2`,
+      ge: `2 წლიანი გამოცდილება ${i} 2`,
       ru: `tag ru ${i} 2`,
     },  {
       en: `tag en ${i} 3`,
-      ge: `tag ge ${i} 3`,
+      ge: `უცხო ენა: ფრანგული ${i} 3`,
       ru: `tag ru ${i} 3`,
     }];
 }

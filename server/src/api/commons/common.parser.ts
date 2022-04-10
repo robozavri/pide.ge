@@ -22,5 +22,6 @@ function parseCommon(body: any) {
     'aboutUs',
     'policy',
     'privacy',
+    'faqs',
   ]);
 }
