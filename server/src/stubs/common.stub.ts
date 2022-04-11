@@ -14,6 +14,8 @@ const CommonStub = {
   'contacts': {
     'email': 'info@pide.ge',
     'phone': '551085478',
+    'phone2': '551085200',
+    'phone3': '551085300',
   },
   'aboutUs': {
     'content': {

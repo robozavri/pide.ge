@@ -5,6 +5,8 @@ import imageSchema from '../../schemas/image.schema';
 const contactSchema = {
     email: String,
     phone: String,
+    phone2: String,
+    phone3: String,
 };
 
 const promoSchema = {

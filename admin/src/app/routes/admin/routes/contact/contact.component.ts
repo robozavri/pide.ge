@@ -31,10 +31,14 @@ export class ContactComponent implements OnInit {
  
     this.formData.email = this.formData.email || '';
     this.formData.phone = this.formData.phone || '';
+    this.formData.phone2 = this.formData.phone2 || '';
+    this.formData.phone3 = this.formData.phone3 || '';
 
     this.form = this.fb.group({
       email: [this.formData.email || ''],
-      phone: [this.formData.phone || '']
+      phone: [this.formData.phone || ''],
+      phone2: [this.formData.phone2 || ''],
+      phone3: [this.formData.phone3 || '']
     });
   }
 
