@@ -21,7 +21,7 @@ export function initRoutes(app: Express) {
   app.use(express.static(path.join(config.paths.uploads)));
 
   app.get('/admin', renderAdminHtml);
-  app.get('/', renderClientHtml);
+  app.get('/', setMetaTags, renderClientHtml);
   app.use(express.static(path.join(config.root, '../client/dist')));
   app.use(express.static(path.join(config.root, '../admin/dist')));
   app.set('views', path.join(config.root, '../client/dist'));
@@ -39,13 +39,13 @@ export function initRoutes(app: Express) {
   app.use('/api/faqs', faqsRouter);
 
   app.get('/admin/*', renderAdminHtml);
-  app.get('/*', renderClientHtml);
+  app.get('/*', setMetaTags, renderClientHtml);
 
   app.use(handleError);
 }
 
-function renderClientHtml(req: Request, res: Response) {
-  res.render(path.join(config.root, '../client/dist/index.html'));
+function renderClientHtml(req: any, res: Response) {
+  res.render(path.join(config.root, '../client/dist/index.html'), req.metaTags);
 }
 
 function renderAdminHtml(req: Request, res: Response) {

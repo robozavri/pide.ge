@@ -1,8 +1,8 @@
 export const defaults = {
-  TITLE: ``,
-  DESCRIPTION: ``,
-  KEYWORDS: ``,
-  IMAGE: '',
+  TITLE: `Pide`,
+  DESCRIPTION: `pide`,
+  KEYWORDS: `pide`,
+  IMAGE: '/assets/images/meta-image.png',
 };
 
 export const OG_FB_ID = '';

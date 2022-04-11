@@ -3,40 +3,65 @@
 import * as Meta from '../api/metas/meta.dao';
 import config from '../config/environment';
 import { defaults, OG_FB_ID } from '../constants/metaTags';
+import { imageSize } from 'image-size';
+import path from 'path';
 
 const pathModels: { [key: string]: string } = {
-  '/home': 'home',
+  '': 'home',
+  'home': 'home',
+  'faq': 'faqs',
 };
 
 const BASE_URL = `${config.url.scheme}://${config.url.host}/`;
 
-export function getMetaTags(url: string) {
-  const model: string = pathModels[url];
-  return Meta.getOne()
-    .then((data: {[key: string]: any}) => getPageMetaTagsObject(url, data[model]))
-    .catch(() => getDefaultMetaTagsObject(url));
+export async function getMetaTags(url: string) {
+  try {
+    let metaData: any = {};
+    const urlPart = url.split('/')[1] || '';
+    const firstUrlPart = urlPart.split('?')[0] || '';
+
+    if (pathModels.hasOwnProperty(firstUrlPart)) {
+      const metas: any = await Meta.getOne();
+      metaData = metas[pathModels[firstUrlPart]];
+    }
+  return getPageMetaTagsObject(url, metaData);
+  } catch (e) {
+    return getPageMetaTagsObject(url, {});
+  }
 }
 
-function getPageMetaTagsObject(url: string, model: any) {
-  return model ? {
-    title: (model.title && (model.title.ge || model.title.en)) || defaults.TITLE,
-    description: (model.description && (model.description.ge || model.description.en)) || defaults.DESCRIPTION,
-    keywords: (model.keywords && model.keywords.length) ? model.keywords.join(', ') : defaults.KEYWORDS,
-    ogFbId: OG_FB_ID,
-    ogImage: `${BASE_URL}${(model.image && model.image.url) || defaults.IMAGE}`,
-    ogUrl: `${config.url.host}${url}`,
-    ogType: (url.length < 2) ? 'website' : 'question',
-  } : getDefaultMetaTagsObject(url);
-}
 
-function getDefaultMetaTagsObject(url: string) {
+function getPageMetaTagsObject(url: string, { title, description, keywords, image }: any) {
+  if (url === '/') url = '';
+
+  const imageUrl = (image && image.url);
+
+  let originalFilePath = '';
+  if (imageUrl && imageUrl.length > 0) {
+    originalFilePath = getLocalFilePath(imageUrl);
+  } else {
+    originalFilePath = getAssetsFilePath(defaults.IMAGE);
+  }
+
+  const { width: imgWidth, height: imgHeight } = imageSize(originalFilePath);
+
   return {
-    title: defaults.TITLE,
-    description: defaults.DESCRIPTION,
-    keywords: defaults.KEYWORDS,
+    title: (title && (title.en || title.ge)) || defaults.TITLE,
+    description: (description && (description.en || description.ge)) || defaults.DESCRIPTION,
+    keywords: (keywords && keywords.length) ? keywords.join(', ') : defaults.KEYWORDS,
     ogFbId: OG_FB_ID,
-    ogImage: `${BASE_URL}${defaults.IMAGE}`,
+    ogImage: `${BASE_URL}${(image && image.url) || defaults.IMAGE}`,
+    ogImageWidth: imgWidth,
+    ogImageHeight: imgHeight,
     ogUrl: `${config.url.host}${url}`,
-    ogType: (url.length < 2) ? 'website' : 'question',
+    ogType: 'website',
   };
+}
+
+export function getLocalFilePath(fileName: any) {
+  return path.join(config.paths.uploads, fileName);
+}
+
+export function getAssetsFilePath(fileName: any) {
+  return path.join(config.root, `../client/dist/${fileName}`);
 }
