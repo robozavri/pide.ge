@@ -12,6 +12,7 @@ function parseMeta(body: any) {
   const parsedBody: any = {};
 
   if (body.home) parsedBody.home = body.home;
+  if (body.faqs) parsedBody.faqs = body.faqs;
 
   return parsedBody;
 }

@@ -21,6 +21,11 @@
                         </app-meta-form>
                     </mat-tab>
 
+                    <mat-tab label="faqs">
+                        <app-meta-form [meta]="metas.faqs" pageTitle="faqs" (submitMeta)="update($event, 'faqs')">
+                        </app-meta-form>
+                    </mat-tab>
+
                 </mat-tab-group>
             </div>
         </div>
