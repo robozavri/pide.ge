@@ -4,7 +4,7 @@
      <div class="title">
         <h1 >{{'PRIVACY' | translate}} </h1>
      </div>
-        <p [innerHTML]="'T' | translate : privacy?.content"></p>
+        <p [innerHTML]="content"></p>
         <div class="banner-wraper">
             <div class="banner bg-img" [ngStyle]="{'background-image': 'url(' + (privacy?.banner?.url | resourceUrl) + ')'}">
                 <a href="https://pide.ge/pide-order/">

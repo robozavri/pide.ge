@@ -1,7 +1,7 @@
 <div class="container">
     <div class="bg-img" [ngStyle]=" screenSize > 768 ? {'background-image': 'url(' + (promo.image?.url | resourceUrl) + ')'} : '' ">
       <div class="header-text-wraper">
-        <div class="header-text" [innerHTML]="'T' | translate : promo.title"></div>
+        <div class="header-text" [innerHTML]="title"></div>
         <div>
           <a href="https://pide.ge/pide-order/">
               <button class="btn booking-btn">

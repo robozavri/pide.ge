@@ -157,9 +157,9 @@
     "typescript": "^3.1.6"
   },
   "server": {
-    "user": "gdg",
+    "user": "root",
     "scheme": "http",
-    "host": "",
+    "host": "165.232.64.244",
     "port": "4002"
   }
 }

@@ -10,22 +10,22 @@
 		display: flex;
 		flex-direction: column;
 		padding-top: 164px;
+		word-wrap:break-word;
 
 		.header-text {
-			width: 411px;
-			height: 256px;
 			font-family: "contractica-black";
-			font-size: 42px;
     		font-weight: bold;
 
 			font-style: normal;
 			font-weight: 900;
-			font-size: 49px;
-			line-height: 64px;
+			word-wrap:break-word;
+			text-overflow: clip;
+			text-overflow: ellipsis;
+
 		}
 		.booking-btn {
-			margin-top: 42px;
-			width: 205px;
+			margin-top: 40px;
+			width: 212px;
 			height: 65px;
 			font-size: 20px;
 			font-weight: bold;
@@ -42,16 +42,114 @@
 	}
 }
   
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
+		.header-text {
+			width: 411px;
+			font-family: "contractica-black";
+			font-size: 42px;
+    		font-weight: bold;
+
+			font-style: normal;
+			font-weight: 900;
+			font-size: 49px;
+			line-height: 64px;
+			word-wrap:break-word;
+			text-overflow: clip;
+			text-overflow: ellipsis;
+		}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	.header-text-wraper {
+		align-items: center;
+		padding-top: 61px !important;
+	}
+		.header-text {
+			width: 411px;
+			font-family: "contractica-black";
+			font-size: 42px;
+    		font-weight: bold;
+
+			font-style: normal;
+			font-weight: 900;
+			font-size: 49px;
+			line-height: 64px;
+			word-wrap:break-word;
+			text-overflow: clip;
+			text-overflow: ellipsis;
+		}
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.header-text-wraper {
+		align-items: center;
+		padding-top: 61px !important;
+	}
+
+		.header-text {
+			width: 411px;
+			font-family: "contractica-black";
+			font-size: 42px;
+    		font-weight: bold;
+
+			font-style: normal;
+			font-weight: 900;
+			font-size: 49px;
+			line-height: 64px;
+			word-wrap:break-word;
+			text-overflow: clip;
+			text-overflow: ellipsis;
+		}
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+	.header-text-wraper {
+		align-items: center;
+		padding-top: 61px !important;
+	}
+		.header-text {
+			width: 411px;
+			font-family: "contractica-black";
+			font-size: 42px;
+    		font-weight: bold;
+
+			font-style: normal;
+			font-weight: 900;
+			font-size: 49px;
+			line-height: 64px;
+			word-wrap:break-word;
+			text-overflow: clip;
+			text-overflow: ellipsis;
+			text-align: center;
+		}
+}
+
+@media screen and (min-width: 390px) and (max-width: 500px) {
 
 	.header-text-wraper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 0px !important;
+		padding-top: 61px !important;
 
 		.header-text { 
+			width: 330px;
 			text-align: center;
+			font-size: 31px;
 		}
 	}
+}
+  
+@media screen and (min-width: 200px) and (max-width: 390px) {
+
+	.header-text-wraper {
+		align-items: center;
+		padding-top: 61px !important;
+
+
+		.header-text { 
+			width: 330px;
+			text-align: center;
+			font-size: 31px;
+		}
+	}
+
 }

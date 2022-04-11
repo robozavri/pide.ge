@@ -4,7 +4,7 @@
         <div class="title">
             <h1 > {{'POLICY' | translate}} </h1>
          </div>
-        <p [innerHTML]="'T' | translate : policy?.content">
+        <p [innerHTML]="content">
         </p>
         <div class="banner-wraper">
             <div class="banner bg-img" [ngStyle]="{'background-image': 'url(' + (policy?.banner?.url | resourceUrl) + ')'}">
