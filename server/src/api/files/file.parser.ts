@@ -4,8 +4,10 @@ import { parseArray } from '../../helpers/parser-utils';
 export function parseCreateAndDestroy(req: Request, res: Response, next: NextFunction) {
   req.body = {
     fileNamesToDestroy: parseArray(req.body.fileNamesToDestroy),
-    imageHeight: req.body.imageHeight,
-    imageWidth: req.body.imageWidth,
+    mobileWidth: req.body.mobileWidth,
+    mobileHeight: req.body.mobileHeight,
+    desktopWidth: req.body.desktopWidth,
+    desktopHeight: req.body.desktopHeight,
   };
   next();
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
 
@@ -35,8 +35,8 @@ export class ContactComponent implements OnInit {
     this.formData.phone3 = this.formData.phone3 || '';
 
     this.form = this.fb.group({
-      email: [this.formData.email || ''],
-      phone: [this.formData.phone || ''],
+      email: [this.formData.email || '', [Validators.required]],
+      phone: [this.formData.phone || '', [Validators.required]],
       phone2: [this.formData.phone2 || ''],
       phone3: [this.formData.phone3 || '']
     });

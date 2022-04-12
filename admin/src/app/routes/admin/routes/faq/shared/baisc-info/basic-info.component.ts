@@ -34,12 +34,12 @@ export class BasicInfoComponent extends _FormComponent implements OnInit {
     this.form = this.fb.group({
       question: this.fb.group({
         en: [this.formData.question.en || ''],
-        ge: [this.formData.question.ge || ''],
+        ge: [this.formData.question.ge || '', [Validators.required]],
         ru: [this.formData.question.ru || ''],
       }),
       answer: this.fb.group({
-        en: [this.formData.answer.en || ''],
-        ge: [this.formData.answer.ge || ''],
+        en: [this.formData.answer.en || '',],
+        ge: [this.formData.answer.ge || '', [Validators.required]],
         ru: [this.formData.answer.ru || ''],
       }),
     });

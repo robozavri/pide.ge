@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
-import { largeSize } from 'app/shared/constants/image';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-policy',
@@ -13,7 +13,7 @@ import { largeSize } from 'app/shared/constants/image';
 export class PolicyComponent implements OnInit {
   form: FormGroup;
   formData: any = {};
-  imageSize = largeSize;
+  imageSizes = ImageSizesByModule.banner;
 
   constructor(
     private fb: FormBuilder,
@@ -36,7 +36,7 @@ export class PolicyComponent implements OnInit {
 
     this.form = this.fb.group({
       content:  this.fb.group({
-        ge: [this.formData.content.ge || ''],
+        ge: [this.formData.content.ge || '', [Validators.required]],
         en: [this.formData.content.en || ''],
         ru: [this.formData.content.ru || ''],
       }),    

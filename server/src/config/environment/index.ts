@@ -2,7 +2,7 @@ import * as path from 'path';
 import devConfig from './development';
 import prodConfig from './production';
 
-const dataRoot = path.join(process.env.HOME, '.core-data');
+const dataRoot = path.join(process.env.HOME, '.pide-data');
 
 const config: any = {
   env: process.env.NODE_ENV || 'development',

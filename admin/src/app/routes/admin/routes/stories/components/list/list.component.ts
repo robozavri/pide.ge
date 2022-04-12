@@ -36,7 +36,7 @@ export class ListComponent implements OnInit {
   pageLength: number;
   pageEvent: PageEvent;
   expandedElement: any;
-  displayedColumns = ['id', 'title', 'active'];
+  displayedColumns = ['id', 'image', 'title', 'active'];
 
   constructor(
   ) { }

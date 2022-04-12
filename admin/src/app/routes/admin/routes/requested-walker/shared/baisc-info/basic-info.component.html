@@ -43,8 +43,7 @@
     <div class="inputs_container">
       <app-image-upload
         [image]="formData.Image"
-        [imageHeight]="imageSize.height"
-        [imageWidth]="imageSize.width"
+        [imageSizes]="imageSizes.image"
         (uploadComplete)="onUploadCompleteImage3($event)">
       </app-image-upload>
     </div>

@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
-import { largeSize } from 'app/shared/constants/image';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-promo',
@@ -13,7 +13,7 @@ import { largeSize } from 'app/shared/constants/image';
 export class PromoComponent implements OnInit {
   form: FormGroup;
   formData: any = {};
-  imageSize = largeSize;
+  imageSizes = ImageSizesByModule.promo;
 
   constructor(
     private fb: FormBuilder,
@@ -37,7 +37,7 @@ export class PromoComponent implements OnInit {
     this.form = this.fb.group({
       title:  this.fb.group({
         ge: [this.formData.title.ge || ''],
-        en: [this.formData.title.en || ''],
+        en: [this.formData.title.en || '', [Validators.required]],
         ru: [this.formData.title.ru || ''],
       }),
       image: this.fb.group({

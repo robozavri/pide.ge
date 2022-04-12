@@ -6,6 +6,15 @@
       <mat-header-cell *matHeaderCellDef> N </mat-header-cell>
       <mat-cell *matCellDef="let item; let i = dataIndex;"> {{ i + 1 }} </mat-cell>
     </ng-container>
+        
+    <!-- image column -->
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef #nameLabel> image </mat-header-cell>
+      <mat-cell *matCellDef="let item">
+        <img class="product-image" width="100px"
+        *ngIf="item" [src]="item.Image.url | resourceUrl"/>
+      </mat-cell>
+    </ng-container>
     
     <!-- title column -->
     <ng-container matColumnDef="title">

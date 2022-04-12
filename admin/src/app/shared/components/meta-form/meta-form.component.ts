@@ -4,6 +4,7 @@ import { Meta } from 'app/shared/models/meta';
 import { MatChipInputEvent, MatSnackBar } from '@angular/material';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { FormComponent } from 'app/shared/components/form.component';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-meta-form',
@@ -20,7 +21,7 @@ export class MetaFormComponent extends FormComponent implements OnInit {
   base64 = false;
 
   form: FormGroup;
-
+  imageSizes = ImageSizesByModule.meta;
   visible = true;
   selectable = true;
   removable = true;

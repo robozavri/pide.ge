@@ -69,14 +69,14 @@ export class RequestedWalkerComponent implements OnInit, AfterViewInit {
           .subscribe(
             () => this.snackBarService.open('Updated Successfully'),
             () => this.snackBarService.open('Update Failed'),
-            () => this.router.navigate(['/admin/requested-walkers']),
+            () => this.router.navigate(['/admin/walkers']),
           );
       } else {
         this.api.create(this.getFormData())
           .subscribe(
             () => this.snackBarService.open('Created Successfully'),
             () => this.snackBarService.open('Creation Failed'),
-            () => this.router.navigate(['/admin/requested-walkers']),
+            () => this.router.navigate(['/admin/walkers']),
           );
       }
     } else {

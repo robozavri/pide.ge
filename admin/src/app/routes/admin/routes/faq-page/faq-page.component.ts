@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SnackBarService } from 'app/shared/services/snack-bar.service';
 import { CommonApiService } from 'app/shared/http/common-api.service';
-import { largeSize } from 'app/shared/constants/image';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-faq-page',
@@ -13,7 +13,7 @@ import { largeSize } from 'app/shared/constants/image';
 export class FaqPageComponent implements OnInit {
   form: FormGroup;
   formData: any = {};
-  imageSize = largeSize;
+  imageSizes = ImageSizesByModule.banner;
 
   constructor(
     private fb: FormBuilder,

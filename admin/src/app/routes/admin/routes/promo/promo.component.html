@@ -21,8 +21,7 @@
             <div class="inputs_container">
               <app-image-upload
                 [image]="formData.image"
-                [imageHeight]="imageSize.height"
-                [imageWidth]="imageSize.width"
+                [imageSizes]="imageSizes.image"
                 (uploadComplete)="onUploadCompleteImage($event)">
               </app-image-upload>
             </div>

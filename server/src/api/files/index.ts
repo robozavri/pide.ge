@@ -45,15 +45,21 @@ function returnEditorFile(req: Request, res: Response, next: NextFunction) {
   }
 }
 
+
 async function resizeAndCompressImage(req: Request, res: Response, next: NextFunction) {
   try {
     const files: any = req.files;
-    const { imageHeight, imageWidth } = req.body;
+    let {
+      mobileWidth,
+      mobileHeight,
+      desktopWidth,
+      desktopHeight,
+     } = req.body;
 
-    if (!imageHeight && !imageWidth) {
-      res.sendStatus(200);
-      return;
-    }
+     mobileWidth = parseInt(mobileWidth) + ((mobileWidth * 10) / 100);
+     mobileHeight = parseInt(mobileHeight) + ((mobileWidth * 10) / 100);
+     desktopWidth = parseInt(desktopWidth) + ((desktopWidth * 10) / 100);
+     desktopHeight = parseInt(desktopHeight) + ((mobileWidth * 10) / 100);
 
     const fileNames = [];
     for (const file of files) {
@@ -62,17 +68,53 @@ async function resizeAndCompressImage(req: Request, res: Response, next: NextFun
       const fileName = file.originalname.split(`.${extension}`);
       const filePath = getLocalFilePath(file.originalname);
       const {width, height} = imageSize(filePath);
-      const factor = Math.max(Math.min(width / (Number(imageHeight) || imageConfig.desiredPrintWidth), height / (Number(imageWidth) || imageConfig.desiredPrintHeight)), 1);
-      const finalWidth = Math.round(width / factor);
-      const finalHeight = Math.round(height / factor);
-      const resizedFilePath = getLocalFilePath(fileName[0] + '-resized.' + extension);
-      await sharp(filePath).resize(finalWidth, finalHeight).toFile(resizedFilePath);
-      fileNames.push(fileName[0] + '-resized.' + extension);
+
+      // old
+      // const factor = Math.max(Math.min(width / (Number(desktopWidth) || imageConfig.desiredPrintWidth), height / (Number(desktopHeight) || imageConfig.desiredPrintHeight)), 1);
+      // const finalWidth = Math.round(width / factor);
+      // const finalHeight = Math.round(height / factor);
+      // const resizedFilePath = getLocalFilePath(fileName[0] + '-resized.' + extension);
+      // // await sharp(filePath).resize(finalWidth, finalHeight).toFile(resizedFilePath);
+      // await sharp(filePath).toFile(resizedFilePath);
+      // fileNames.push(fileName[0] + '-resized.' + extension);
+
+      // new
+      await resizeMobile({width, height, mobileWidth, mobileHeight, fileName, filePath});
+      await resizeDesktop({width, height, desktopWidth, desktopHeight, fileName, filePath});
+      const Fname = await convertToWEBP({fileName, filePath});
+      fileNames.push(Fname);
+
+      fs.unlink(filePath, () => {});
     }
     res.json(fileNames);
   } catch (e) {
     next(e);
   }
+}
+
+async function convertToWEBP({fileName, filePath}: any ) {
+    const Fname = fileName[0] + '.webp';
+    const localFilePath = getLocalFilePath(Fname);
+    await sharp(filePath).webp().toFile(localFilePath);
+    return Fname;
+}
+
+async function resizeMobile({width, height, mobileWidth, mobileHeight, fileName, filePath}: any ) {
+    const factor = Math.max(Math.min(width / (Number(mobileWidth) || imageConfig.desiredPrintWidth), height / (Number(mobileHeight) || imageConfig.desiredPrintHeight)), 1);
+    const finalWidth = Math.round(width / factor);
+    const finalHeight = Math.round(height / factor);
+    const resizedFilePath = getLocalFilePath(fileName[0] + '-mobile.webp');
+    await sharp(filePath).webp().resize(finalWidth, finalHeight).toFile(resizedFilePath);
+    return fileName[0] + '-mobile.webp';
+}
+
+async function resizeDesktop({width, height, desktopWidth, desktopHeight, fileName, filePath}: any ) {
+    const factor = Math.max(Math.min(width / (Number(desktopWidth) || imageConfig.desiredPrintWidth), height / (Number(desktopHeight) || imageConfig.desiredPrintHeight)), 1);
+    const finalWidth = Math.round(width / factor);
+    const finalHeight = Math.round(height / factor);
+    const resizedFilePath = getLocalFilePath(fileName[0] + '-desktop.webp');
+    await sharp(filePath).webp().resize(finalWidth, finalHeight).toFile(resizedFilePath);
+    return fileName[0] + '-desktop.webp';
 }
 
 function getLocalFilePath(fileName: any) {

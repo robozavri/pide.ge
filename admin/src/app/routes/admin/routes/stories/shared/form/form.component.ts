@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { FormComponent as _FormComponent } from '../../../../../../shared/components/form.component';
 import { Story } from 'app/shared/models/story';
-import { largeSize } from 'app/shared/constants/image';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class FormComponent extends _FormComponent implements OnInit {
   @Output() submitForm = new EventEmitter<Story>();
 
   form: FormGroup;
-  imageSize = largeSize;
+  imageSizes = ImageSizesByModule.stories;
   
 
   constructor(
@@ -33,21 +33,19 @@ export class FormComponent extends _FormComponent implements OnInit {
     this.formData.Image = this.formData.Image || {};
 
     this.form = this.fb.group({ 
-    title: this.fb.group({
-        
-      en: [this.formData.title.en || ''],
-      ge: [this.formData.title.ge || ''],
-      ru: [this.formData.title.ru || ''],
-    }),
-    description: this.fb.group({
-        
-      en: [this.formData.description.en || ''],
-      ge: [this.formData.description.ge || ''],
-      ru: [this.formData.description.ru || ''],
-    }), 
-    Image: this.fb.group({
-      url: [this.formData.Image.url || '']
-    }),
+      title: this.fb.group({        
+        en: [this.formData.title.en || ''],
+        ge: [this.formData.title.ge || '', [Validators.required]],
+        ru: [this.formData.title.ru || ''],
+      }),
+      description: this.fb.group({        
+        en: [this.formData.description.en || ''],
+        ge: [this.formData.description.ge || '', [Validators.required]],
+        ru: [this.formData.description.ru || ''],
+      }), 
+      Image: this.fb.group({
+        url: [this.formData.Image.url || '']
+      }),
     });
   }
   

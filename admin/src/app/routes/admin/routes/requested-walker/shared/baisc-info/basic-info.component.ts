@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { FormComponent as _FormComponent } from '../../../../../../shared/components/form.component';
 import { RequestedWalker } from 'app/shared/models/requested-walker';
-import { largeSize } from 'app/shared/constants/image';
+import { ImageSizesByModule } from 'app/shared/constants/image';
 
 @Component({
   selector: 'app-basic-info',
@@ -16,7 +16,7 @@ export class BasicInfoComponent extends _FormComponent implements OnInit {
   @Output() submitForm = new EventEmitter<RequestedWalker>();
  
   form: FormGroup;
-  imageSize = largeSize;
+  imageSizes = ImageSizesByModule.stories;
   
 
   get tags(): FormArray {
@@ -41,12 +41,12 @@ export class BasicInfoComponent extends _FormComponent implements OnInit {
     this.form = this.fb.group({
       name: this.fb.group({
         en: [this.formData.name.en || ''],
-        ge: [this.formData.name.ge || ''],
+        ge: [this.formData.name.ge || '', [Validators.required]],
         ru: [this.formData.name.ru || ''],
       }),
       description: this.fb.group({
         en: [this.formData.description.en || ''],
-        ge: [this.formData.description.ge || ''],
+        ge: [this.formData.description.ge || '', [Validators.required]],
         ru: [this.formData.description.ru || ''],
       }), 
       Image: this.fb.group({
